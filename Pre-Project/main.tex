@@ -19,33 +19,33 @@
 \makeatletter
 \def\@maketitle{\newpage
  \null
- \vskip 2em                 % Vertical space above title.
+ \vskip 2em
 \begingroup
   \def\and{\unskip, }
   \parindent=\z@
   \pretolerance=10000
   \rightskip=\z@ \@plus 3cm
-  {\LARGE                   % each author set in \LARGE
+  {\LARGE
    \lineskip .5em
    \@author
-   \par}%
-  \vskip 2cm                % Vertical space after author.
-  {\Huge \@title \par}%     % Title set in \Huge size.
-  \vskip 1cm                % Vertical space after title.
+   \par}
+  \vskip 2cm
+  {\Huge \@title \par}
+  \vskip 1cm
   \if!\@subtitle!\else
    {\LARGE\ignorespaces\@subtitle \par}
-   \vskip 1cm                % Vertical space after subtitle.
+   \vskip 1cm
   \fi
   \if!\@date!\else
-    {\large \@date}%          % Date set in \large size.
+    {\large \@date}
     \par
-    \vskip 1.5em               % Vertical space after date.
+    \vskip 1.5em
   \fi
  \vfill
 \endgroup}
 \makeatother
 
-\title{\Huge \textbf{Radioastronomia}}
+\title{\Huge \textbf{Radiotelescopios de bajo costo para la enseñanza de la Radioastronomía en Colegios}}
 
 \author{Laura Herrera \and Bryan Martinez \and Julian Avila}
 

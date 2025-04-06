@@ -19,7 +19,46 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{Vaquerizo2010}{misc}{}{}
+    \entry{MenorAdame2018}{unpublished}{}{}
+      \name{author}{1}{}{%
+        {{hash=3c7190a58091cd0390e17207d23a914e}{%
+           family={Menor\bibnamedelima Adame},
+           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {spanish}%
+      }
+      \list{location}{1}{%
+        {Madrid}%
+      }
+      \strng{namehash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{fullhash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{fullhashraw}{3c7190a58091cd0390e17207d23a914e}
+      \strng{bibnamehash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{authorbibnamehash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{authornamehash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{authorfullhash}{3c7190a58091cd0390e17207d23a914e}
+      \strng{authorfullhashraw}{3c7190a58091cd0390e17207d23a914e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{En este proyecto tratamos de diseñar y de construir un radiotelescopio de bajo coste basado en tecnologías de radio definida por software, es decir, SDR. La idea es utilizar hardware de bajo coste, con la intención de demostrar que se puede realizar la aproximación al mundo de la radioastronomía de una manera aproximada a como lo haría una persona con más medios. Todo este hardware se verá respaldado por el software Matlab, con el que podremos realizar los cálculos oportunos que puedan requerir los datos que obtengamos en las medidas. Dado que nuestro radiotelescopio se dedica a captar y no a recibir, no interfiere en otros posibles sistemas que estén instalados en sus inmediaciones. Se han llevado a cabo varias medidas de las propuestas principales. La medida del Sol, que ha sido la primera, ha resultado exitosa para nuestros intereses, y se ha podido demostrar lo que se pretendía. Con ayuda de los resultados de esa primera medida, se ha podido caracterizar el primer diseño del radiotelescopio. La última de las medidas, la medida del Hidrógeno, no podemos darla como un éxito, dado que no se ha obtenido lo que se pretendía observar con la nueva configuración del radiotelescopio. Con estos resultados, podemos concluir que el primer diseño ha sido un éxito y que se puede realizar un acercamiento razonable para ciertas medidas. Que la segunda medida haya fallado, nos hace pensar que, para medidas un poco más complejas, como ha sido esta segunda, quizá el desembolso que se ha realizado en el diseño tenga que ser ligeramente superior, dado que puede requerir de algún componente extra o simplemente sustituir los componentes menos específicos que tenemos por alguno un poco más concreto para la medida que se quiera llevara a cabo, además de sustituir el amplificador que no funciona de la forma que se esperaba para nuestra medida. Además, por esta precisa razón, es razonable pensar que ciertamente se puede llegará a conseguir el objetivo de este proyecto (ya que en parte se ha conseguido), y por tanto se abren muchas posibilidades y líneas que se pueden explorar en un futuro para poder realizar un mejor acercamiento a la idea que pretende demostrar este proyecto. Abstract: In this project, we try to design and build a low cost radio telescope based on software defined radio technologies, SDR. The idea is to use low cost hardware, with the intention of demonstrating that the approach to the radio astronomy world can be approximated in a way that a person with more means would. All this hardware will be supported by Matlab software, with which we can perform the appropriate calculations that may require the data we obtain in the measurements. Since our radio telescope is dedicated to capturing and not receiving, it does not interfere with other possible systems that are installed in its vicinity. Several measures of the main proposals have been carried out. The measurement of the Sun, which has been the first, has been successful for our interests, and it has been possible to demonstrate what was intended. With the help of the results of this first measure, the first design of the radio telescope has been characterized. The last of the measures, the measurement of hydrogen, we cannot give as a success, since it has not been obtained what was intended to observe with the new configuration of the radio telescope. With these results, we can conclude that the first design has been a success and that a reasonable approach can be made for certain measures. That the second measure has failed, makes us think that, for slightly more complex measures, as this second one has been, the disbursement that has been made in the design may have to be slightly higher, since it may require some extra component or simply replace the less specific components that we have by some a little more concrete for the measure that you want to carry out, in addition to replacing the amplifier that does not work in the way that was expected for our measurement. In addition, for this precise reason, it is reasonable to think that it is possible to achieve the objective of this project (since it has been partially achieved), and therefore many possibilities and lines are open that can be explored in the future to be able to make a better approach to the idea that aims to demonstrate this project.}
+      \field{month}{Diciembre}
+      \field{note}{No Publicado}
+      \field{title}{Diseño de un radiotelescopio de bajo coste basado en tecnologías de radio definida por software}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://oa.upm.es/55238/
+      \endverb
+      \verb{url}
+      \verb https://oa.upm.es/55238/
+      \endverb
+      \keyw{Radioastronomía}
+    \endentry
+    \entry{Vaquerizo2010}{online}{}{}
       \name{author}{1}{}{%
         {{hash=f13f4a1214343a0a6e03dc0231e8d5d5}{%
            family={Vaquerizo},
@@ -35,8 +74,8 @@
       \strng{authornamehash}{f13f4a1214343a0a6e03dc0231e8d5d5}
       \strng{authorfullhash}{f13f4a1214343a0a6e03dc0231e8d5d5}
       \strng{authorfullhashraw}{f13f4a1214343a0a6e03dc0231e8d5d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{Fundación para el Conocimiento Madrid, Centro de Astrobiología CSIC-INTA}
@@ -44,12 +83,14 @@
       \field{note}{Consultado el 30 de marzo de 2025}
       \field{title}{{PARTNeR: Radioastronomía desde el aula}}
       \field{year}{2010}
+      \field{dateera}{ce}
       \verb{urlraw}
       \verb https://www.madrimasd.org/partner-radioastronomia-desde-aula
       \endverb
       \verb{url}
       \verb https://www.madrimasd.org/partner-radioastronomia-desde-aula
       \endverb
+      \warn{\item Overwriting field 'month' with month value from field 'date' for entry 'Vaquerizo2010'}
     \endentry
     \entry{AIDCT2011}{article}{}{}
       \name{author}{1}{}{%
@@ -68,8 +109,8 @@
       \strng{authornamehash}{f4e0d09036077d0d27a4ef898687ba6c}
       \strng{authorfullhash}{f4e0d09036077d0d27a4ef898687ba6c}
       \strng{authorfullhashraw}{f4e0d09036077d0d27a4ef898687ba6c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ciencias Sociales México}
@@ -98,12 +139,12 @@
       \strng{authornamehash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
       \strng{authorfullhash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
       \strng{authorfullhashraw}{7ebaffc22e5e6885ac8bf7c68bbbac48}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Boletines BUAP}
-      \field{month}{4}
+      \field{month}{abr}
       \field{note}{Consultado el 30 de marzo de 2025}
       \field{title}{{Del Aula al Universo, un telescopio para cada escuela, un programa que acerca los astros a los jóvenes}}
       \field{year}{2021}
@@ -151,8 +192,8 @@
       \strng{authornamehash}{6b26650fd5002f6eb06eae6585800a1a}
       \strng{authorfullhash}{b72946bc17467d89170600eadf4df033}
       \strng{authorfullhashraw}{b72946bc17467d89170600eadf4df033}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{© Coordinación de Astrofísica, INAOE}
@@ -200,8 +241,8 @@
       \strng{editornamehash}{20ca447d17c22f27926773bcf78f020c}
       \strng{editorfullhash}{20ca447d17c22f27926773bcf78f020c}
       \strng{editorfullhashraw}{20ca447d17c22f27926773bcf78f020c}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Basado en “El Universo Invisible” de Universe Awareness (UNAWE) y “Explorando nuestros orígenes cósmicos” del Observatorio Europeo Austral (ESO). Traducción al español por Ney Fernández y la Unidad de Astronomía de la Universidad de Antofagasta.}
@@ -239,41 +280,13 @@
       \strng{authornamehash}{1400d54afa46bae740cf2f09c86f3980}
       \strng{authorfullhash}{1400d54afa46bae740cf2f09c86f3980}
       \strng{authorfullhashraw}{1400d54afa46bae740cf2f09c86f3980}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Construcción de un radiotelescopio pequeño para la exploración solar en centros de interés}
       \field{type}{Trabajo de grado}
       \field{year}{2023}
-    \endentry
-    \entry{GobiernoMexico2024}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=d57959770319b9ee400970c37250dddb}{%
-           family={{Gobierno de México}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{d57959770319b9ee400970c37250dddb}
-      \strng{fullhash}{d57959770319b9ee400970c37250dddb}
-      \strng{fullhashraw}{d57959770319b9ee400970c37250dddb}
-      \strng{bibnamehash}{d57959770319b9ee400970c37250dddb}
-      \strng{authorbibnamehash}{d57959770319b9ee400970c37250dddb}
-      \strng{authornamehash}{d57959770319b9ee400970c37250dddb}
-      \strng{authorfullhash}{d57959770319b9ee400970c37250dddb}
-      \strng{authorfullhashraw}{d57959770319b9ee400970c37250dddb}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Consultado el 30 de marzo de 2025}
-      \field{title}{Inauguran la 16ª edición de la Escuela de Astronomía Observacional para Estudiantes Latinoamericanos}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.inaoep.mx/noticias/?noticia=1154&anio=2024
-      \endverb
-      \verb{url}
-      \verb https://www.inaoep.mx/noticias/?noticia=1154&anio=2024
-      \endverb
     \endentry
     \entry{Anzola2024}{inproceedings}{}{}
       \name{author}{7}{}{%
