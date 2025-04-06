@@ -1,0 +1,339 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Vaquerizo2010}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f13f4a1214343a0a6e03dc0231e8d5d5}{%
+           family={Vaquerizo},
+           familyi={V\bibinitperiod},
+           given={Juan\bibnamedelima Ángel},
+           giveni={J\bibinitperiod\bibinitdelim Á\bibinitperiod}}}%
+      }
+      \strng{namehash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{fullhash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{fullhashraw}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{bibnamehash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{authorbibnamehash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{authornamehash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{authorfullhash}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \strng{authorfullhashraw}{f13f4a1214343a0a6e03dc0231e8d5d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Fundación para el Conocimiento Madrid, Centro de Astrobiología CSIC-INTA}
+      \field{month}{5}
+      \field{note}{Consultado el 30 de marzo de 2025}
+      \field{title}{{PARTNeR: Radioastronomía desde el aula}}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://www.madrimasd.org/partner-radioastronomia-desde-aula
+      \endverb
+      \verb{url}
+      \verb https://www.madrimasd.org/partner-radioastronomia-desde-aula
+      \endverb
+    \endentry
+    \entry{AIDCT2011}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f4e0d09036077d0d27a4ef898687ba6c}{%
+           family={{Agencia Iberoamericana para la Difusión de la Ciencia y la Tecnología}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Santa María Tonantzintla, México}%
+      }
+      \strng{namehash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{fullhash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{fullhashraw}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{bibnamehash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{authorbibnamehash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{authornamehash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{authorfullhash}{f4e0d09036077d0d27a4ef898687ba6c}
+      \strng{authorfullhashraw}{f4e0d09036077d0d27a4ef898687ba6c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ciencias Sociales México}
+      \field{month}{9}
+      \field{note}{Consultado el 30 de marzo de 2025}
+      \field{title}{{INAOE, BUAP y Victorinox México firman convenio de colaboración para construir telescopios para escuelas}}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://www.dicyt.com/noticias/inaoe-buap-y-victorinox-mexico-firman-convenio-de-colaboracion-para-construir-telescopios-para-escuelas
+      \endverb
+      \verb{url}
+      \verb https://www.dicyt.com/noticias/inaoe-buap-y-victorinox-mexico-firman-convenio-de-colaboracion-para-construir-telescopios-para-escuelas
+      \endverb
+    \endentry
+    \entry{BoletinesBUAP2021}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7ebaffc22e5e6885ac8bf7c68bbbac48}{%
+           family={{Boletines BUAP}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{fullhash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{fullhashraw}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{bibnamehash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{authorbibnamehash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{authornamehash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{authorfullhash}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \strng{authorfullhashraw}{7ebaffc22e5e6885ac8bf7c68bbbac48}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Boletines BUAP}
+      \field{month}{4}
+      \field{note}{Consultado el 30 de marzo de 2025}
+      \field{title}{{Del Aula al Universo, un telescopio para cada escuela, un programa que acerca los astros a los jóvenes}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.boletin.buap.mx/node/1971
+      \endverb
+      \verb{url}
+      \verb https://www.boletin.buap.mx/node/1971
+      \endverb
+    \endentry
+    \entry{AbrahamLuna2021}{report}{}{}
+      \name{author}{4}{}{%
+        {{hash=bc559b9d95c0981241dc564078cef6e1}{%
+           family={C.},
+           familyi={C\bibinitperiod},
+           given={Abraham\bibnamedelima Luna},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=357dc1005f69bff3c31cab9fb1fa25dc}{%
+           family={G.},
+           familyi={G\bibinitperiod},
+           given={Gisela\bibnamedelima Domínguez},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a210c811b7d1fd9ebc7fbf0884d6b23d}{%
+           family={F.},
+           familyi={F\bibinitperiod},
+           given={Sergio\bibnamedelimb Alejandro\bibnamedelima Colombres},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=8a27cee1e99f9b79b955cd53482dad4c}{%
+           family={Fragoso},
+           familyi={F\bibinitperiod},
+           given={Gilberto\bibnamedelima Garista},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE)}%
+      }
+      \list{location}{1}{%
+        {Luis Enrique Erro 1, Sta. Ma. Tonantzintla, 72840, Puebla, México}%
+      }
+      \strng{namehash}{6b26650fd5002f6eb06eae6585800a1a}
+      \strng{fullhash}{b72946bc17467d89170600eadf4df033}
+      \strng{fullhashraw}{b72946bc17467d89170600eadf4df033}
+      \strng{bibnamehash}{b72946bc17467d89170600eadf4df033}
+      \strng{authorbibnamehash}{b72946bc17467d89170600eadf4df033}
+      \strng{authornamehash}{6b26650fd5002f6eb06eae6585800a1a}
+      \strng{authorfullhash}{b72946bc17467d89170600eadf4df033}
+      \strng{authorfullhashraw}{b72946bc17467d89170600eadf4df033}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{© Coordinación de Astrofísica, INAOE}
+      \field{title}{Manual de Construcción de un Radiotelescopio en la Banda de 12 GHz para Usos Docentes}
+      \field{type}{Reporte Técnico}
+      \field{year}{2021}
+    \endentry
+    \entry{Gallardo2021}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=2679b8fc7527925500e3ec0582fc3ae2}{%
+           family={Gallardo},
+           familyi={G\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=81b3112ebf556db0da590e2d7c2b54a4}{%
+           family={Toledo},
+           familyi={T\bibinitperiod},
+           given={Ignacio},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d47e730859324f59353a80c42bc10987}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=20ca447d17c22f27926773bcf78f020c}{%
+           family={Foncea},
+           familyi={F\bibinitperiod},
+           given={Valeria},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ALMA, ESO, NAOJ, NRAO}%
+      }
+      \strng{namehash}{6ca32646ea088bb01f046d7996bd1f48}
+      \strng{fullhash}{546304a8a928a9a12f0690cf76817d72}
+      \strng{fullhashraw}{546304a8a928a9a12f0690cf76817d72}
+      \strng{bibnamehash}{546304a8a928a9a12f0690cf76817d72}
+      \strng{authorbibnamehash}{546304a8a928a9a12f0690cf76817d72}
+      \strng{authornamehash}{6ca32646ea088bb01f046d7996bd1f48}
+      \strng{authorfullhash}{546304a8a928a9a12f0690cf76817d72}
+      \strng{authorfullhashraw}{546304a8a928a9a12f0690cf76817d72}
+      \strng{editorbibnamehash}{20ca447d17c22f27926773bcf78f020c}
+      \strng{editornamehash}{20ca447d17c22f27926773bcf78f020c}
+      \strng{editorfullhash}{20ca447d17c22f27926773bcf78f020c}
+      \strng{editorfullhashraw}{20ca447d17c22f27926773bcf78f020c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Basado en “El Universo Invisible” de Universe Awareness (UNAWE) y “Explorando nuestros orígenes cósmicos” del Observatorio Europeo Austral (ESO). Traducción al español por Ney Fernández y la Unidad de Astronomía de la Universidad de Antofagasta.}
+      \field{title}{Manual de Radioastronomía ALMA en la Escuela}
+      \field{type}{techreport}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.eso.org/public/archives/education/pdf/edu_0071.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.eso.org/public/archives/education/pdf/edu_0071.pdf
+      \endverb
+    \endentry
+    \entry{Penaloza2023}{thesis}{}{}
+      \name{author}{2}{}{%
+        {{hash=4e69098ad958c00de50d1c48412be886}{%
+           family={Peñaloza},
+           familyi={P\bibinitperiod},
+           given={Jaime\bibnamedelima Pinzón},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ca3ef406559ec8eb290a40fa9c54ebfe}{%
+           family={Bernal},
+           familyi={B\bibinitperiod},
+           given={Julieth\bibnamedelimb Camila\bibnamedelima Cabrera},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidad Pedagógica Nacional}%
+      }
+      \strng{namehash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{fullhash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{fullhashraw}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{bibnamehash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{authorbibnamehash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{authornamehash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{authorfullhash}{1400d54afa46bae740cf2f09c86f3980}
+      \strng{authorfullhashraw}{1400d54afa46bae740cf2f09c86f3980}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Construcción de un radiotelescopio pequeño para la exploración solar en centros de interés}
+      \field{type}{Trabajo de grado}
+      \field{year}{2023}
+    \endentry
+    \entry{GobiernoMexico2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d57959770319b9ee400970c37250dddb}{%
+           family={{Gobierno de México}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d57959770319b9ee400970c37250dddb}
+      \strng{fullhash}{d57959770319b9ee400970c37250dddb}
+      \strng{fullhashraw}{d57959770319b9ee400970c37250dddb}
+      \strng{bibnamehash}{d57959770319b9ee400970c37250dddb}
+      \strng{authorbibnamehash}{d57959770319b9ee400970c37250dddb}
+      \strng{authornamehash}{d57959770319b9ee400970c37250dddb}
+      \strng{authorfullhash}{d57959770319b9ee400970c37250dddb}
+      \strng{authorfullhashraw}{d57959770319b9ee400970c37250dddb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Consultado el 30 de marzo de 2025}
+      \field{title}{Inauguran la 16ª edición de la Escuela de Astronomía Observacional para Estudiantes Latinoamericanos}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.inaoep.mx/noticias/?noticia=1154&anio=2024
+      \endverb
+      \verb{url}
+      \verb https://www.inaoep.mx/noticias/?noticia=1154&anio=2024
+      \endverb
+    \endentry
+    \entry{Anzola2024}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=5a382ca51403a0a9c7135d2d270b4d96}{%
+           family={Anzola},
+           familyi={A\bibinitperiod},
+           given={Bryan\bibnamedelima Martinez},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=97dd9382a706bbd1c3f880213d2f53cd}{%
+           family={Angulo},
+           familyi={A\bibinitperiod},
+           given={Camila\bibnamedelima Pérez},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b31f6efe316b29cde64f4f726cae6ecb}{%
+           family={Rodríguez},
+           familyi={R\bibinitperiod},
+           given={Laura\bibnamedelimb Sofía\bibnamedelima Cortés},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=3867ff78a4bed26a118ba1fa50e60228}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Laura\bibnamedelimb Yeraldin\bibnamedelima Herrera},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=c3462bb73dcf262fd01a451665561e14}{%
+           family={Rivera},
+           familyi={R\bibinitperiod},
+           given={María\bibnamedelimb Alejandra\bibnamedelima Amariles},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=58328219200ab4b9aa1050b82f99c6a1}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={Michael\bibnamedelimb Stiven\bibnamedelima Castillo},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=5fd17921e9efae713ff71e86dd885457}{%
+           family={Benavides},
+           familyi={B\bibinitperiod},
+           given={Samuel\bibnamedelimb Esteban\bibnamedelima Parede},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Universidad Distrital Francisco José de Caldas}%
+      }
+      \strng{namehash}{305008d767dcea4e4a83a71765cff54b}
+      \strng{fullhash}{ccde46e3fc0a5d1c6dae9059a5746b55}
+      \strng{fullhashraw}{ccde46e3fc0a5d1c6dae9059a5746b55}
+      \strng{bibnamehash}{305008d767dcea4e4a83a71765cff54b}
+      \strng{authorbibnamehash}{305008d767dcea4e4a83a71765cff54b}
+      \strng{authornamehash}{305008d767dcea4e4a83a71765cff54b}
+      \strng{authorfullhash}{ccde46e3fc0a5d1c6dae9059a5746b55}
+      \strng{authorfullhashraw}{ccde46e3fc0a5d1c6dae9059a5746b55}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Congreso Colombiano de Astronomía y Astrofísica}
+      \field{note}{Presentado en el Congreso Colombiano de Astronomía y Astrofísica, 2024}
+      \field{title}{Construcción de un radiotelescopio para analizar el Sol en la banda de 12GHz}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

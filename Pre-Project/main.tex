@@ -1,0 +1,87 @@
+\documentclass[sn-mathphys]{svmono}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[linkcolor=blue,citecolor=blue,urlcolor=blue,filecolor=blue]{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{newtxtext,newtxmath}
+\usepackage{csquotes}
+\usepackage[spanish]{babel}
+\usepackage[backend=biber,style=nature,sorting=none]{biblatex}
+\usepackage{authblk}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{bookmark}
+
+\addbibresource{references.bib}
+
+\makeatletter
+\def\@maketitle{\newpage
+ \null
+ \vskip 2em                 % Vertical space above title.
+\begingroup
+  \def\and{\unskip, }
+  \parindent=\z@
+  \pretolerance=10000
+  \rightskip=\z@ \@plus 3cm
+  {\LARGE                   % each author set in \LARGE
+   \lineskip .5em
+   \@author
+   \par}%
+  \vskip 2cm                % Vertical space after author.
+  {\Huge \@title \par}%     % Title set in \Huge size.
+  \vskip 1cm                % Vertical space after title.
+  \if!\@subtitle!\else
+   {\LARGE\ignorespaces\@subtitle \par}
+   \vskip 1cm                % Vertical space after subtitle.
+  \fi
+  \if!\@date!\else
+    {\large \@date}%          % Date set in \large size.
+    \par
+    \vskip 1.5em               % Vertical space after date.
+  \fi
+ \vfill
+\endgroup}
+\makeatother
+
+\title{\Huge \textbf{Radioastronomia}}
+
+\author{Laura Herrera \and Bryan Martinez \and Julian Avila}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\chapter{Introducción}
+\section{Problemática}
+\input{./Sections/problem.tex}
+
+\section{Justificación}
+\input{./Sections/justification.tex}
+
+\section{Marco Contextual}
+\input{./Sections/context.tex}
+
+\section{Marco Legal}
+\input{./Sections/legal.tex}
+
+\chapter{Objetivos}
+\input{./Sections/objective.tex}
+
+\chapter{Metodología}
+\input{./Sections/methodology.tex}
+
+\chapter{Antecedentes}
+\input{./Sections/precedent.tex}
+
+\printbibliography
+
+\end{document}
+
