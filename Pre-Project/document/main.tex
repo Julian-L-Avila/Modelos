@@ -3,7 +3,9 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage[dvipsnames]{xcolor}
-\usepackage[linkcolor=blue,citecolor=blue,urlcolor=blue,filecolor=blue]{hyperref}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[breaklinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,filecolor=blue]{hyperref}
 \usepackage{amsmath,amssymb}
 \usepackage{newtxtext,newtxmath}
 \usepackage{csquotes}
@@ -14,6 +16,7 @@
 \usepackage{booktabs}
 \usepackage{bookmark}
 
+\hypersetup{breaklinks=true}
 \addbibresource{references.bib}
 
 \makeatletter
@@ -75,7 +78,7 @@
 \chapter{Objetivos}
 \input{./Sections/objective.tex}
 
-\chapter{Metodología}
+\chapter{Metodología y Desarrollo}
 \input{./Sections/methodology.tex}
 
 \chapter{Antecedentes}
