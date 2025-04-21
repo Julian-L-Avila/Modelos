@@ -1,0 +1,75 @@
+\documentclass[aspectratio=169,sn-mathphys-num,spanish]{beamer}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[sorting=none]{biblatex}
+\usepackage[spanish]{babel}
+\usepackage{ragged2e}
+\addbibresource{../document/references.bib}
+
+\usetheme[numbering=counter, progressbar=frametitle, background=light]{metropolis}
+
+\usecolortheme{dove}
+\definecolor{primary}{RGB}{88, 24, 69}
+\definecolor{secondary}{RGB}{0, 168, 150}
+
+\setbeamercovered{transparent}
+\setbeamercolor{frametitle}{fg=white, bg=primary}
+\setbeamercolor{progress bar}{fg=secondary}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamercolor{alerted text}{fg=secondary}
+\setbeamercolor{block title}{fg=primary}
+\setbeamercolor{block body}{bg=white}
+
+\title{Radiotelescopios de bajo costo para la enseñanza de la Radioastronomía en Colegios}
+\author{Laura Herrera \and Bryan Martinez \and Julian Avila}
+\institute{Universidad Distrital Francisco José de Caldas}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\setbeamertemplate{section in toc}[circle]
+	\tableofcontents
+\end{frame}
+
+\section{Problemática}
+\input{./Sections/problem.tex}
+
+\section{Proyecto}
+\input{./Sections/project.tex}
+
+\section{Objetivos}
+\input{./Sections/objectives.tex}
+
+\section{Metodología}
+\input{./Sections/methodology.tex}
+
+\section{Desarrollo}
+\input{./Sections/development.tex}
+
+\section{Antecedentes}
+\input{./Sections/precedent.tex}
+
+\section{Bibliografía}
+\begin{frame}[allowframebreaks]{Bibliography}
+	\printbibliography
+	\nocite{*}
+\end{frame}
+
+\begin{frame}{Gracias}
+	\centering
+	{\LARGE Gracias por la atención}
+	\vspace{0.5cm}
+
+\Large ¿Preguntas?
+\end{frame}
+
+\end{document}
