@@ -6,9 +6,9 @@ demanda del primer trimestre del año siguiente (correspondiente a los valores
 utilizó el método de promedios móviles.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/graphic1.png}
-    \label{fig:graphic1}
+  \centering
+  \includegraphics[width=0.5\linewidth]{../Figures/}
+  \label{fig:graphic1}
 \end{figure}
 
 Este método consiste en calcular el promedio de cuatro valores consecutivos de 
@@ -40,8 +40,8 @@ observa en la \cref{fig:graphic1}. Por lo tanto, se procede a realizar un ajuste
 lineal, del cual se obtiene la siguiente ecuación:
 
 \begin{equation}
-    y = 0.148x + 5.101
-    \label{eq:equation1}
+  y = 0.148x + 5.101
+  \label{eq:equation1}
 \end{equation}
 
 Con la \cref{eq:equation1}, se calculan los valores de demanda 
@@ -51,15 +51,15 @@ obtenidos se les añade el margen de error, el cual se calcula mediante la
 siguiente ecuación:
 
 \begin{equation*}
-    mr = \sqrt{\frac{\sum y^2 - a(\sum y - b\sum xy)}{n-2}}
+  mr = \sqrt{\frac{\sum y^2 - a(\sum y - b\sum xy)}{n-2}}
 \end{equation*}
 
 En donde:
 \begin{itemize}
-    \item La variable $y$ corresponde a los valores de demanda desestacionalizada.
-    \item $n = 16$
-    \item $a = 0.148$
-    \item $b = 5.101$
+  \item La variable $y$ corresponde a los valores de demanda desestacionalizada.
+  \item $n = 16$
+  \item $a = 0.148$
+  \item $b = 5.101$
 \end{itemize}
 
 Una vez obtenidos los valores de demanda desestacionalizada para el primer 
@@ -68,17 +68,17 @@ desestacionalización correspondiente. De este modo, se obtienen los valores de
 demanda real para dichos trimestres. En la \cref{fig:graphic2} se muestra la 
 gráfica con los valores de demanda correspondientes a los cinco trimestres 
 presentados en la \cref{tab:table}.
- 
+
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/graphic2.png}
-    \label{fig:graphic2}
+  \centering
+  %\includegraphics[width=0.5\linewidth]{images/graphic2.png}
+  \label{fig:graphic2}
 \end{figure}
 
-\begin{table*}[]
-\pgfplotstabletypeset[
-    col sep=comma,
-    columns/Month/.style = {string type},
-]{table.csv}
-\label{tab:table}
-\end{table*}
+%\begin{table*}[]
+  % \pgfplotstabletypeset[
+  % col sep=comma,
+  % columns/Month/.style = {string type},
+  % ]{table.csv}
+  % \label{tab:table}
+% \end{table*}
