@@ -1,0 +1,67 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{newtxtext,newtxmath}
+\usepackage[dvipsnames]{xcolor}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Ventas Trimestrales},
+    width=12cm,
+    height=8cm,
+    xlabel={Trimestre},
+    ylabel={Ventas (en miles)},
+    yticklabel style={/pgf/number format/fixed},
+    grid=major,
+    grid style={gray!20, line width=0.3pt},
+    tick style={black},
+    tick label style={font=\large},
+    label style={font=\large},
+    title style={font=\large\bfseries},
+    legend style={
+      font=\large,
+      draw=none,
+      fill=none,
+      at={(0.97,0.03)},
+      anchor=south east
+    },
+    legend cell align={left},
+    scale only axis,
+    enlargelimits=false,
+    xmin=0, xmax=22,
+    ymin=3, ymax=10,
+    minor tick num=1,
+    line width=0.8pt,
+  ]
+
+  \addplot[
+    color=Plum,
+    mark=*,
+    mark options={fill=Plum},
+    very thick
+  ] table[
+    col sep=tab,
+    header=false,
+    x index=0,
+    y index=1
+  ] {../Data/original-prediction-data.tsv};
+  \addlegendentry{Datos Originales}
+
+  \addplot[
+    color=Green,
+    mark=*,
+    mark options={fill=Green!30},
+    very thick
+  ] table[
+    col sep=tab,
+    header=false,
+    x index=0,
+    y index=1
+  ] {../Data/out-season-prediction-data.tsv};
+  \addlegendentry{Datos Transformados}
+
+  \end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepackage{newtxtext,newtxmath}
+\usepackage[dvipsnames]{xcolor}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Ventas Trimestrales},
+    width=12cm,
+    height=8cm,
+    xlabel={Trimestre},
+    ylabel={Ventas [\(10^3\)]},
+    yticklabel style={/pgf/number format/fixed},
+    grid=major,
+    grid style={gray!20, line width=0.3pt},
+    tick style={black},
+    every axis/.append style={
+      title style={font=\large\bfseries},
+      label style={font=\large},
+      tick label style={font=\large},
+      legend style={font=\large}
+    },
+    legend style={
+      draw=none,
+      fill=none,
+      at={(0.97,0.03)},
+      anchor=south east
+    },
+    scale only axis,
+    enlargelimits=false,
+    xmin=0, xmax=18,
+    ymin=3, ymax=9,
+    minor tick num=1,
+    line width=0.8pt,
+  ]
+    \addplot[
+      color=Plum,
+      mark=*,
+      mark options={fill=Plum},
+      thick
+    ] table[
+      col sep=tab,
+      header=false,
+      x index=0,
+      y index=1
+    ] {../Data/original-data.tsv};
+    \addlegendentry{Datos}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
