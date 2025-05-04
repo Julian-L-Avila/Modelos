@@ -2,7 +2,7 @@ En este ejemplo, los datos disponibles presentan un comportamiento estacional,
 evidenciado por los picos máximos y mínimos que se repiten periódicamente a lo
 largo del tiempo, como se muestra en la \cref{fig:season-data}.
 Para predecir la demanda del primer trimestre del año siguiente
-(correspondiente a los valores 16, 17, 18, 19 y 20), es necesario
+(correspondiente a los valores 17, 18, 19 y 20), es necesario
 desestacionalizar los datos.
 Para ello, se utilizó el método de promedios móviles.
 
@@ -25,7 +25,7 @@ ya obtenidos.
 El resultado de este segundo promedio se asigna a la fila situada entre ambos
 valores originales.
 Estos nuevos valores corresponden a la columna denominada \textit{Promedio centrado}
-en la \cref{tab:table}.
+en el \cref{tab:table}.
 
 A continuación, se divide cada valor de demanda entre su respectivo promedio
 centrado, obteniendo así un coeficiente por cada trimestre de demanda.
@@ -75,7 +75,7 @@ trimestre del año siguiente, cada uno debe multiplicarse por su coeficiente de
 desestacionalización correspondiente.
 De este modo, se obtienen los valores de demanda real para dichos trimestres.
 En la \cref{fig:prediction} se muestra la gráfica con los valores de demanda
-correspondientes a los cinco años presentados en la \cref{tab:table}.
+correspondientes a los cinco años presentados en el \cref{tab:table}.
 
 \begin{figure}[htpb!]
   \centering
