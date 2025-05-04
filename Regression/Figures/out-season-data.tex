@@ -1,7 +1,7 @@
 \documentclass[tikz]{standalone}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
-\usepackage{mathpazo}
+\usepackage{newtxtext,newtxmath}
 \usepackage[dvipsnames]{xcolor}
 \pgfplotsset{compat=1.18}
 
@@ -12,15 +12,16 @@
     width=12cm,
     height=8cm,
     xlabel={Trimestre},
-    ylabel={Ventas (en miles)},
+    ylabel={Ventas [\(10^3\)]},
+    yticklabel style={/pgf/number format/fixed},
     grid=major,
-    grid style={solid, gray!30, line width=0.3pt},
+    grid style={gray!20, line width=0.3pt},
     tick style={black},
-    tick label style={font=\small},
-    label style={font=\small},
-    title style={font=\normalsize\bfseries},
+    tick label style={font=\large},
+    label style={font=\large},
+    title style={font=\large\bfseries},
     legend style={
-      font=\small,
+      font=\large,
       draw=none,
       fill=none,
       at={(0.97,0.03)},
@@ -32,10 +33,9 @@
     xmin=0, xmax=18,
     ymin=3, ymax=9,
     minor tick num=1,
-    line width=1pt,
+    line width=0.8pt,
   ]
 
-  % Original data in background color
   \addplot[
     color=Plum!30,
     mark=*,
@@ -49,7 +49,6 @@
   ] {../Data/original-data.tsv};
   \addlegendentry{Datos Originales}
 
-  % Transformed data
   \addplot[
     color=Green,
     mark=*,
@@ -63,7 +62,6 @@
   ] {../Data/out-season-data.tsv};
   \addlegendentry{Datos Transformados}
 
-  % Regression on transformed data
   \addplot [
     color=Black,
     domain=0:18,
@@ -73,8 +71,7 @@
   ] {0.147139 * x + 5.09961};
   \addlegendentry{Ajuste lineal}
 
-  % Regression formula as node
-  \node[anchor=north west, font=\small] at (rel axis cs:0.05,0.95)
+  \node[anchor=north west, font=\large] at (rel axis cs:0.05,0.95)
     {$y = 0.148x + 5.101$};
 
   \end{axis}

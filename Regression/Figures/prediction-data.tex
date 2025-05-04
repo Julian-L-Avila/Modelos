@@ -1,7 +1,7 @@
 \documentclass[tikz]{standalone}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
-\usepackage{mathpazo}
+\usepackage{newtxtext,newtxmath}
 \usepackage[dvipsnames]{xcolor}
 \pgfplotsset{compat=1.18}
 
@@ -13,14 +13,15 @@
     height=8cm,
     xlabel={Trimestre},
     ylabel={Ventas (en miles)},
+    yticklabel style={/pgf/number format/fixed},
     grid=major,
-    grid style={solid, gray!30, line width=0.3pt},
+    grid style={gray!20, line width=0.3pt},
     tick style={black},
-    tick label style={font=\small},
-    label style={font=\small},
-    title style={font=\normalsize\bfseries},
+    tick label style={font=\large},
+    label style={font=\large},
+    title style={font=\large\bfseries},
     legend style={
-      font=\small,
+      font=\large,
       draw=none,
       fill=none,
       at={(0.97,0.03)},
@@ -32,10 +33,9 @@
     xmin=0, xmax=22,
     ymin=3, ymax=10,
     minor tick num=1,
-    line width=1pt,
+    line width=0.8pt,
   ]
 
-  % Original data in background color
   \addplot[
     color=Plum,
     mark=*,
@@ -49,7 +49,6 @@
   ] {../Data/original-prediction-data.tsv};
   \addlegendentry{Datos Originales}
 
-  % Transformed data
   \addplot[
     color=Green,
     mark=*,
