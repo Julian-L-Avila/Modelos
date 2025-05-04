@@ -1,0 +1,50 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepackage{mathpazo}
+\usepackage[dvipsnames]{xcolor}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Ventas Trimestrales},
+    width=12cm,
+    height=8cm,
+    xlabel={Trimestre},
+    ylabel={Ventas [\(10^3\)]},
+    yticklabel=\pgfmathprintnumber{\tick}.0,
+    grid=major,
+    grid style={solid, gray!30, line width=0.3pt},
+    tick style={black},
+    tick label style={font=\small},
+    label style={font=\small},
+    title style={font=\normalsize\bfseries},
+    legend style={
+      font=\small,
+      draw=none,
+      fill=none,
+      at={(0.97,0.03)},
+      anchor=south east
+    },
+    scale only axis,
+    enlargelimits=false,
+    xmin=0, xmax=18,
+    ymin=3, ymax=9,
+    minor tick num=1,
+    line width=1pt,
+  ]
+    \addplot[
+      color=Plum,
+      mark=*,
+      mark options={fill=Plum},
+      very thick
+    ] table[
+      col sep=tab,
+      header=false,
+      x index=0,
+      y index=1
+    ] {../Data/original-data.tsv};
+    \addlegendentry{Datos}
+  \end{axis}
+\end{tikzpicture}
+\end{document}
