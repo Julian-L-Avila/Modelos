@@ -15,6 +15,7 @@
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{bookmark}
+\usepackage{cleveref}
 
 \hypersetup{breaklinks=true}
 \addbibresource{references.bib}
@@ -88,10 +89,14 @@
 
 \input{./Sections/methodology.tex}
 
-\subsection{Estudio de Mercado}%
-\label{sub:Estudio de Mercado}
+\chapter{Estudio de Mercado}%
+\label{cha:Estudio de Mercado}
 
-\input{./Sections/Methodology/demand.tex}
+\input{./Sections/Market/product.tex}
+
+\input{./Sections/Market/demand.tex}
+
+\input{./Sections/Market/price.tex}
 
 \printbibliography
 
