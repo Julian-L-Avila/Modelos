@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{pgfplots, pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usepackage[dvipsnames]{xcolor}
+\usepgfplotslibrary{statistics}
+
+\pgfplotstableread[header=false, col sep=comma]{
+  1, 2404
+  2, 565
+  3, 490
+  4, 238
+}\datable
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    ybar,
+    xtick=data,
+    xticklabels={Inicial, Filtro 1, Filtro 2, Filtro 3},
+    ymin=0, ymax=3000,
+    xmin=0.25, xmax=4.75,
+    bar width=0.6cm,
+    font=\sffamily\footnotesize,
+    ticklabel style={font=\sffamily\footnotesize},
+    label style={font=\sffamily\small},
+    ylabel={Posibles Colegios},
+    title={Determinacion de Demanda},
+    every axis line/.append style={thin, black},
+    every tick/.append style={thin, black},
+    nodes near coords,
+    nodes near coords align={vertical},
+    grid=both,
+    minor y tick num=1,
+    ]
+    \addplot[red!20!black, fill=red!20] table [
+      y index=1,
+      x index=0
+      ]{\datable};
+  \end{axis}
+\end{tikzpicture}
+\end{document}
