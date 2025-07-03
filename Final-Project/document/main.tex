@@ -1,0 +1,109 @@
+\documentclass[sn-mathphys]{svmono}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[breaklinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,filecolor=blue]{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{newtxtext,newtxmath}
+\usepackage{csquotes}
+\usepackage[spanish]{babel}
+\usepackage[backend=biber,style=nature,sorting=none]{biblatex}
+\usepackage{authblk}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\usepackage{cleveref}
+
+\hypersetup{breaklinks=true}
+\addbibresource{references.bib}
+
+\makeatletter
+\def\@maketitle{\newpage
+ \null
+ \vskip 2em
+\begingroup
+  \def\and{\unskip, }
+  \parindent=\z@
+  \pretolerance=10000
+  \rightskip=\z@ \@plus 3cm
+  {\LARGE
+   \lineskip .5em
+   \@author
+   \par}
+  \vskip 2cm
+  {\Huge \@title \par}
+  \vskip 1cm
+  \if!\@subtitle!\else
+   {\LARGE\ignorespaces\@subtitle \par}
+   \vskip 1cm
+  \fi
+  \if!\@date!\else
+    {\large \@date}
+    \par
+    \vskip 1.5em
+  \fi
+ \vfill
+\endgroup}
+\makeatother
+
+\title{\Huge \textbf{Radiotelescopios de bajo costo para la enseñanza de la Radioastronomía en Colegios}}
+
+\author{Laura Herrera \and Bryan Martinez \and Julian Avila}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\chapter{Introducción}
+\section{Problemática}
+\input{./Sections/problem.tex}
+
+\section{Justificación}
+\input{./Sections/justification.tex}
+
+\section{Marco Contextual}
+\input{./Sections/context.tex}
+
+\section{Marco Legal}
+\input{./Sections/legal.tex}
+
+\chapter{Objetivos}
+\input{./Sections/objective.tex}
+
+\chapter{Metodología y Desarrollo}
+
+\section{Antecedentes}
+
+\input{./Sections/precedent.tex}
+
+\section{Metodología}
+
+\input{./Sections/methodology.tex}
+
+\chapter{Estudio de Mercado}%
+\label{cha:Estudio de Mercado}
+
+\input{./Sections/Market/product.tex}
+
+\input{./Sections/Market/demand.tex}
+
+\input{./Sections/Market/supply.tex}
+
+\input{./Sections/Market/price.tex}
+
+\input{./Sections/Market/funding.tex}
+
+\input{./Sections/Market/publicity.tex}
+
+\printbibliography
+
+\end{document}
