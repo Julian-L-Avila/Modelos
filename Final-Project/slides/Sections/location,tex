@@ -1,0 +1,127 @@
+\section{Localización}
+% --- DIAPOSITIVA 2 ---
+\begin{frame}{Nuestro Enfoque de Localización en Dos Fases}
+    \begin{itemize}
+        \item \textbf{Objetivo:} Determinar las áreas geográficas y colegios con mayor probabilidad de éxito para la fase piloto.
+        \item \textbf{Fase 1: Macrolocalización}
+            \begin{itemize}
+                \item \textit{Pregunta:} ¿Cuál es la mejor \textbf{zona geográfica} para enfocar nuestros esfuerzos?
+            \end{itemize}
+        \item \textbf{Fase 2: Microlocalización}
+            \begin{itemize}
+                \item \textit{Pregunta:} ¿Cuáles son los \textbf{3 colegios específicos} con mayor potencial dentro de esa zona?
+            \end{itemize}
+        \item \textbf{Método:} Evaluación Cuantitativa por Puntos para una decisión objetiva y basada en datos.
+    \end{itemize}
+\end{frame}
+
+% --- DIAPOSITIVA 3 ---
+\begin{frame}{Fase 1: Macrolocalización - ¿Dónde Empezar?}
+    \frametitle{Evaluación de Zonas de Influencia}
+    
+    \begin{block}{Alternativas Evaluadas}
+        \begin{itemize}
+            \item Bogotá - Eje Norte (Usaquén, Suba)
+            \item Municipios Aledaños (Chía, Cota)
+            \item Bogotá - Eje Centro-Occidente
+        \end{itemize}
+    \end{block}
+    
+    \begin{block}{Factores Clave Ponderados}
+        \begin{itemize}
+            \item Concentración de Colegios Foco-Ciencia (40\%)
+            \item Potencial de Visibilidad y Prestigio (25\%)
+            \item Facilidad Logística y Tiempo de Viaje (20\%)
+            \item Proximidad al Centro de Operaciones (U.D.) (15\%)
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% --- DIAPOSITIVA 4 ---
+\begin{frame}{Resultados de la Macrolocalización}
+    \frametitle{Matriz de Evaluación de Zonas de Influencia}
+    
+    \begin{table}[h!]
+    \centering
+    \caption{Evaluación de Macrolocalización.}
+    \label{tab:macro_zonas}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|c|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{1.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{1.2cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{1.2cm}|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Factor}} & \textbf{Peso} & \multicolumn{2}{c|}{\textbf{A: Bogotá - Eje Norte}} & \multicolumn{2}{c|}{\textbf{B: Municipios Aledaños}} & \multicolumn{2}{c|}{\textbf{C: Bogotá - Centro}} \\ \hline
+     &  & \textbf{Calif.} & \textbf{Pond.} & \textbf{Calif.} & \textbf{Pond.} & \textbf{Calif.} & \textbf{Pond.} \\ \hline
+    Concentración de Colegios Foco-Ciencia & 40\% & 9 & 3.60 & 8 & 3.20 & 6 & 2.40 \\ \hline
+    Potencial de Visibilidad y Prestigio & 25\% & 8 & 2.00 & 9 & 2.25 & 7 & 1.75 \\ \hline
+    Facilidad Logística y Tiempo de Viaje & 20\% & 7 & 1.40 & 5 & 1.00 & 9 & 1.80 \\ \hline
+    Proximidad al Centro de Operaciones & 15\% & 6 & 0.90 & 4 & 0.60 & 10 & 1.50 \\ \hline
+    \hline
+    \textbf{PUNTUACIÓN TOTAL} & \textbf{100\%} & \multicolumn{2}{c|}{\textbf{7.90}} & \multicolumn{2}{c|}{\textbf{7.05}} & \multicolumn{2}{c|}{\textbf{7.45}} \\ \hline
+    \end{tabular}%
+    }
+    \end{table}
+
+    \begin{alertblock}{Zona Seleccionada: Eje Norte de Bogotá}
+        Ofrece el mejor balance entre una alta concentración de colegios objetivo y una logística manejable.
+    \end{alertblock}
+\end{frame}
+
+% --- DIAPOSITIVA 5 ---
+\begin{frame}{Fase 2: Microlocalización - Búsqueda del Clúster Piloto}
+    \begin{itemize}
+        \item \textbf{Objetivo:} Identificar un "clúster" de 3 colegios en el Eje Norte para el Año 1.
+        \item \textbf{Candidatos Preseleccionados:}
+        \begin{itemize}
+            \item Colegio Calasanz
+            \item Colegio Bilingüe Maximino Poitiers
+            \item Colegio San Viator
+            \item Liceo de Cervantes
+            \item Colegio Abraham Lincoln
+        \end{itemize}
+        \item \textbf{Justificación:} Todos son colegios de alto perfil, ubicados en la zona norte, con afinidad científica y gran potencial de impacto.
+    \end{itemize}
+\end{frame}
+
+% --- DIAPOSITIVA 6 ---
+\begin{frame}{Resultados de la Microlocalización}
+    \frametitle{Ranking Cuantitativo de Colegios Candidatos}
+
+    \begin{table}[h!]
+    \centering
+    \caption{Matriz de Evaluación de Microlocalización (Selección de Colegios).}
+    \label{tab:micro_colegios}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Factor}} & \textbf{Peso} & \multicolumn{2}{c|}{\textbf{Calasanz}} & \multicolumn{2}{c|}{\textbf{M. Poitiers}} & \multicolumn{2}{c|}{\textbf{San Viator}} & \multicolumn{2}{c|}{\textbf{Cervantes}} & \multicolumn{2}{c|}{\textbf{A. Lincoln}} \\ \hline
+     &  & \textbf{Cal.} & \textbf{Pond.} & \textbf{Cal.} & \textbf{Pond.} & \textbf{Cal.} & \textbf{Pond.} & \textbf{Cal.} & \textbf{Pond.} & \textbf{Cal.} & \textbf{Pond.} \\ \hline
+    Evidencia de Foco en Ciencias & 40\% & 10 & 4.00 & 7 & 2.80 & 8 & 3.20 & 8 & 3.20 & 8 & 3.20 \\ \hline
+    Reputación y Visibilidad & 25\% & 8 & 2.00 & 8 & 2.00 & 9 & 2.25 & 10 & 2.50 & 9 & 2.25 \\ \hline
+    Receptividad Institucional (Est.) & 20\% & 9 & 1.80 & 7 & 1.40 & 8 & 1.60 & 8 & 1.60 & 8 & 1.60 \\ \hline
+    Ubicación y Facilidad Logística & 15\% & 8 & 1.20 & 9 & 1.35 & 8 & 1.20 & 7 & 1.05 & 7 & 1.05 \\ \hline
+    \hline
+    \textbf{PUNTUACIÓN TOTAL} & \textbf{100\%} & \multicolumn{2}{c|}{\textbf{9.00}} & \multicolumn{2}{c|}{\textbf{7.55}} & \multicolumn{2}{c|}{\textbf{8.25}} & \multicolumn{2}{c|}{\textbf{8.35}} & \multicolumn{2}{c|}{\textbf{8.10}} \\ \hline
+    \end{tabular}%
+    }
+    \end{table}
+\end{frame}
+
+% --- DIAPOSITIVA 7 ---
+\begin{frame}{Conclusión: Nuestro Clúster Piloto Estratégico}
+    \begin{itemize}
+        \item \textbf{Decisión Basada en Datos:} La estrategia de localización nos permite iniciar con los socios más fuertes en la zona más estratégica.
+        \item \textbf{Clúster Seleccionado para el Año 1 (Top 3 del Ranking):}
+        \begin{alertblock}{}
+            \begin{enumerate}
+                \item \textbf{Colegio Calasanz (Puntaje: 9.00)}
+                \item \textbf{Liceo de Cervantes (Puntaje: 8.35)}
+                \item \textbf{Colegio San Viator (Puntaje: 8.25)}
+            \end{enumerate}
+        \end{alertblock}
+        \item \textbf{Beneficios del Enfoque:}
+        \begin{itemize}
+            \item Maximiza la probabilidad de éxito.
+            \item Optimiza la logística del equipo.
+            \item Crea casos de estudio sólidos para la expansión futura.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
