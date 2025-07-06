@@ -1,0 +1,215 @@
+\section{Proceso de Producción}
+
+En esta sección se detalla el conjunto de actividades, recursos y
+procedimientos necesarios para llevar a cabo la producción e implementación
+del producto-servicio, que consiste en un radiotelescopio educativo y el
+acompañamiento pedagógico asociado. El proceso se ha diseñado para ser
+eficiente, escalable y garantizar un alto estándar de calidad en cada
+entrega.
+
+\subsection{Diagrama de Flujo del Proceso}
+
+El proceso completo, desde la planificación inicial hasta el cierre del
+proyecto con cada colegio, se puede representar mediante el siguiente
+diagrama de flujo. Este abarca tanto las fases de producción del hardware
+como las de implementación y soporte pedagógico, reflejando la naturaleza
+integral del servicio.
+
+% --- INICIO DEL DIAGRAMA TIKZ (DISEÑO EN U) ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm and 1.5cm, % y-dist and x-dist
+    proceso/.style={
+        rectangle,
+        draw,
+        fill=blue!10,
+        text width=4.5cm,
+        text centered,
+        minimum height=1.5cm,
+        rounded corners=3pt
+    },
+    fase/.style={
+        rectangle,
+        draw,
+        dashed,
+        inner ysep=0.5cm,
+        inner xsep=0.5cm,
+        rounded corners=5pt
+    },
+    linea/.style={ -Stealth, draw, thick }
+]
+
+% --- COLUMNA 1 (IZQUIERDA, BAJANDO) ---
+\node (A) [proceso] {Inicio: Convenio con Colegio};
+\node (B) [proceso, below=of A] {Planificación del Proyecto};
+\node (C) [proceso, below=of B]
+    {Adquisición de Componentes Electrónicos y Materiales};
+\node (D) [proceso, below=of C]
+    {Ensamblaje y Soldadura del Hardware del Radiotelescopio};
+\node (E) [proceso, below=of D] {Pruebas Internas y Calibración Inicial};
+\node (F) [proceso, below=of E]
+    {Instalación y Configuración del Software};
+\node (G) [proceso, below=of F]
+    {Desarrollo y Adaptación de Guías Didácticas};
+\node (H) [proceso, below=of G]
+    {Logística: Transporte e Instalación en Colegio};
+
+% --- COLUMNA 2 (DERECHA, SUBIENDO) ---
+\node (I) [proceso, below=of H]
+    {Capacitación Inicial a Docentes y Estudiantes};
+\node (J) [proceso, right=of I, xshift=2.5cm]
+    {Asesoría para Proyectos de Observación Estudiantil};
+\node (K) [proceso, above=of J] {Soporte Técnico y Pedagógico Remoto};
+\node (L) [proceso, above=of K] {Evaluación de Impacto y Apropiación};
+\node (M) [proceso, above=of L]
+    {Sistematización de la Experiencia};
+\node (N) [proceso, above=of M] {Elaboración de Informe Final de Pasantía};
+\node (O) [proceso, above=of N] {Fin del Ciclo};
+
+% --- FLECHAS DE CONEXIÓN ---
+\draw [linea] (A) -- (B); \draw [linea] (B) -- (C);
+\draw [linea] (C) -- (D); \draw [linea] (D) -- (E);
+\draw [linea] (E) -- (F); \draw [linea] (F) -- (G);
+\draw [linea] (G) -- (H);
+\draw [linea] (H) -- (I); % Conexión entre columnas
+\draw [linea] (I) -- (J); \draw [linea] (J) -- (K);
+\draw [linea] (K) -- (L); \draw [linea] (L) -- (M);
+\draw [linea] (M) -- (N); \draw [linea] (N) -- (O);
+
+% --- CONTENEDORES DE FASE ---
+\node[fase, fit=(A)(E),
+    label={[anchor=north]north:Fase 1: Producción (Mes 1-2)}] {};
+\node[fase, fit=(F)(H)(I),
+    label={[anchor=north]south:Fase 2: Implementación (Mes 3-5)}] {};
+\node[fase, fit=(J)(L),
+    label={[anchor=north]south:Fase 3: Acompañamiento (Mes 6-8)}] {};
+\node[fase, fit=(M)(O),
+    label={[anchor=north]north:Fase 4: Cierre Académico (Mes 9-10)}] {};
+
+\end{tikzpicture}
+\caption{Flujo del proceso integral con diseño en U.}
+\label{fig:flujo_proceso_u}
+\end{figure}
+% --- FIN DEL DIAGRAMA TIKZ ---
+
+\subsection{Tabla de Insumos y Materiales}
+A continuación, se detallan los insumos necesarios para la producción de
+\textbf{una (1) unidad} de radiotelescopio y su correspondiente material
+pedagógico.
+
+\begin{longtable}{p{4cm} p{4.5cm} r r}
+\caption{Tabla de Insumos y Materiales por Unidad.} \label{tab:insumos}\\
+\toprule
+\textbf{Categoría} & \textbf{Insumo/Material} & \textbf{Cant.} & \textbf{Costo Est. (COP)} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continuación}} \\
+\toprule
+\textbf{Categoría} & \textbf{Insumo/Material} & \textbf{Cant.} & \textbf{Costo Est. (COP)} \\
+\midrule
+\endhead
+\midrule \multicolumn{4}{r}{{Continúa en la siguiente página}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% Contenido de la tabla
+\textbf{Comp. Electrónicos} & Antena parabólica (reacondicionada) & 1 & \$50.000 \\
+& LNB (Low-Noise Block) & 1 & \$40.000 \\
+& RTL-SDR Dongle & 1 & \$150.000 \\
+& Raspberry Pi 4 (o sup.) & 1 & \$250.000 \\
+& Tarjeta MicroSD (32 GB) & 1 & \$30.000 \\
+& Cables coaxiales y conectores & Varios & \$25.000 \\
+& Fuente de alimentación (5V, 3A) & 1 & \$35.000 \\
+\addlinespace
+\textbf{Mat. Estructurales} & Trípode o base de soporte & 1 & \$70.000 \\
+& Caja protectora (intemperie) & 1 & \$20.000 \\
+& Tornillería y herrajes & Varios & \$15.000 \\
+\addlinespace
+\textbf{Mat. Pedagógico} & Impresión de guías y manuales & 1 kit & \$45.000 \\
+& Material para talleres & 1 set & \$20.000 \\
+\addlinespace
+\textbf{Software} & S.O. para Raspberry Pi & 1 & \$0 \\
+& Software de radioastronomía & 1 & \$0 \\
+\midrule
+\textbf{Subtotal Insumos} & & & \textbf{\$750.000} \\
+\end{longtable}
+\textit{Nota: Los costos son estimaciones y pueden variar. El costo total se
+alinea con el precio de venta de \$800.000, dejando un margen para
+logística, soporte y gastos administrativos.}
+
+\subsection{Tabla de Recursos Humanos}
+El talento humano es el recurso más crítico del proyecto. La siguiente
+tabla describe los roles y la dedicación necesaria.
+
+\begin{longtable}{p{3cm} p{4cm} p{2.5cm} p{4cm}}
+\caption{Tabla de Recursos Humanos.} \label{tab:rrhh}\\
+\toprule
+\textbf{Rol} & \textbf{Perfil Requerido} & \textbf{Dedicación} & \textbf{Responsabilidades} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}%
+{{\bfseries \tablename\ \thetable{} -- continuación}} \\
+\toprule
+\textbf{Rol} & \textbf{Perfil Requerido} & \textbf{Dedicación} & \textbf{Responsabilidades} \\
+\midrule
+\endhead
+\midrule \multicolumn{4}{r}{{Continúa en la siguiente página}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% Contenido de la tabla
+\textbf{Pasante} & Estudiante de últimos semestres de Ing., Física o afines.
+& 600h (10 meses) por implementación. & Liderar todo el ciclo: producción,
+instalación, capacitación, soporte y documentación. \\
+\addlinespace
+\textbf{Tutor Académico} & Docente U.D. con experiencia en proyectos STEM.
+& 2-4 h/semana. & Supervisar el rigor académico y técnico. Facilitar
+recursos. Evaluar informe final. \\
+\addlinespace
+\textbf{Coordinador} & Profesional con experiencia en gestión de proyectos.
+& 4-6 h/semana. & Gestionar relación con colegios, asegurar calidad y
+logística. Buscar nuevas alianzas. \\
+\addlinespace
+\textbf{Docente Contacto} & Docente de ciencias o tecnología del colegio.
+& Variable. & Ser el punto de contacto, coordinar estudiantes y actuar como
+multiplicador del conocimiento. \\
+\end{longtable}
+
+\subsection{Tabla de Maquinaria y Equipo}
+La tecnología del proyecto no requiere maquinaria industrial. El equipo
+necesario es para ensamblaje y pruebas.
+
+\begin{longtable}{p{3.5cm} p{5cm} p{5cm}}
+\caption{Tabla de Maquinaria y Equipo.} \label{tab:maquinaria}\\
+\toprule
+\textbf{Tipo} & \textbf{Descripción} & \textbf{Uso y Ubicación} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- continuación}} \\
+\toprule
+\textbf{Tipo} & \textbf{Descripción} & \textbf{Uso y Ubicación} \\
+\midrule
+\endhead
+\midrule \multicolumn{3}{r}{{Continúa en la siguiente página}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% Contenido de la tabla
+\textbf{Herram. Taller} & Cautín, multímetro, alicates, destornilladores.
+& Ensamblaje electrónico. Ubic: Laboratorio U.D. / Proyecto. \\
+\addlinespace
+\textbf{Equipo Cómputo} & Computador portátil.
+& Programación, análisis de datos, informes. Ubic: Pasante / Proyecto. \\
+\addlinespace
+\textbf{Equipo Pruebas} & Osciloscopio, generador de señales (opcional).
+& Calibración y verificación del receptor. Ubic: Laboratorio U.D. \\
+\addlinespace
+\textbf{Transporte} & Automóvil o servicio contratado.
+& Traslado de equipo y personal para instalación. Ubic: Pasante / Contratado. \\
+\end{longtable}
