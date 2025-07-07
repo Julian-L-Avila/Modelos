@@ -1,0 +1,168 @@
+\begin{frame}[fragile]
+  \frametitle{Diagrama de Flujo del Proceso}
+
+  \begin{figure}
+    \centering
+    \resizebox{0.4\textwidth}{!}{%
+      \begin{tikzpicture}[
+        node distance=0.8cm and 1.2cm, % y-dist and x-dist
+        proceso/.style={
+          rectangle, draw, fill=blue!10, text width=4.2cm, 
+          text centered, minimum height=1.4cm, rounded corners=3pt
+        },
+        fase/.style={
+          rectangle, draw, dashed, inner ysep=0.5cm,
+          inner xsep=0.5cm, rounded corners=5pt
+        },
+        linea/.style={ -Stealth, draw, thick }
+        ]
+
+    % --- COLUMNA 1 (IZQUIERDA, BAJANDO) ---
+        \node (A) [proceso] {Inicio: Convenio con Colegio};
+        \node (B) [proceso, below=of A] {Planificación del Proyecto};
+        \node (C) [proceso, below=of B] 
+        {Adquisición de Componentes y Materiales};
+        \node (D) [proceso, below=of C] 
+        {Ensamblaje y Soldadura del Hardware};
+        \node (E) [proceso, below=of D] {Pruebas y Calibración Inicial};
+        \node (F) [proceso, below=of E] {Instalación de Software};
+        \node (G) [proceso, below=of F] {Adaptación de Guías Didácticas};
+
+    % --- COLUMNA 2 (DERECHA, SUBIENDO) ---
+        \node (H) [proceso, right=of G, xshift=1.5cm] 
+        {Logística e Instalación};
+        \node (I) [proceso, above=of H]
+        {Capacitación a Docentes y Estudiantes};
+        \node (J) [proceso, above=of I] 
+        {Asesoría en Proyectos de Observación};
+        \node (K) [proceso, above=of J] {Soporte Técnico y Pedagógico};
+        \node (L) [proceso, above=of K] {Evaluación de Impacto};
+        \node (M) [proceso, above=of L] {Sistematización de Experiencia};
+        \node (N) [proceso, above=of M] {Elaboración Informe Final};
+
+    % --- FLECHAS ---
+        \draw [linea] (A) -- (B); \draw [linea] (B) -- (C);
+        \draw [linea] (C) -- (D); \draw [linea] (D) -- (E);
+        \draw [linea] (E) -- (F); \draw [linea] (F) -- (G);
+        \draw [linea] (G) -- (H);
+        \draw [linea] (H) -- (I); \draw [linea] (I) -- (J);
+        \draw [linea] (J) -- (K); \draw [linea] (K) -- (L);
+        \draw [linea] (L) -- (M); \draw [linea] (M) -- (N);
+
+    % --- CONTENEDORES DE FASE ---
+        \node[fase, fit=(A)(E), 
+        label={[anchor=north]north:Fase 1: Producción}] {};
+        \node[fase, fit=(F)(G)(H)(I),
+        label={[anchor=south]south:Fase 2: Implementación}] {};
+        \node[fase, fit=(J)(L), 
+        label={[anchor=south]south:Fase 3: Acompañamiento}] {};
+        \node[fase, fit=(M)(N), 
+        label={[anchor=north]north:Fase 4: Cierre}] {};
+
+      \end{tikzpicture}
+    } % fin de resizebox
+  \end{figure}
+\end{frame}
+
+% --- DIAPOSITIVA DE INSUMOS ---
+\begin{frame}
+  \frametitle{Recursos: Insumos y Materiales}
+  \framesubtitle{Costo por unidad: \textbf{COP~\num{750000}}}
+
+  \begin{columns}[T] % Columnas alineadas por arriba
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Componentes Electrónicos}
+        \begin{itemize}
+          \item Antena parabólica
+          \item LNB (Low-Noise Block)
+          \item RTL-SDR Dongle
+          \item Raspberry Pi 4
+          \item MicroSD y Cables
+          \item Fuente de alimentación
+        \end{itemize}
+      \end{block}
+      \begin{block}{Material Pedagógico}
+        \begin{itemize}
+          \item Guías didácticas
+          \item Manuales de usuario
+          \item Material para talleres
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Materiales Estructurales}
+        \begin{itemize}
+          \item Trípode o base
+          \item Caja protectora
+          \item Tornillería y herrajes
+        \end{itemize}
+      \end{block}
+      \begin{block}{Software}
+        \begin{itemize}
+          \item S.O. para Raspberry Pi
+          \item Software de radioastronomía
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% --- DIAPOSITIVA DE RECURSOS HUMANOS ---
+\begin{frame}
+  \frametitle{Recursos: Talento Humano}
+
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lll}
+      \toprule
+      \textbf{Rol} & \textbf{Perfil Requerido} & \textbf{Responsabilidades Clave} \\
+      \midrule
+      \textbf{Pasante} & Estudiante de Ing./Física & 
+      Liderar todo el ciclo del proyecto. \\
+                       & (600h / 10 meses) &
+                       (Producción, instalación, soporte). \\
+                       \addlinespace
+      \textbf{Tutor Académico} & Docente U.D. (STEM) & 
+      Supervisar rigor técnico y académico. \\
+                               & (2-4 h/semana) &
+                               Facilitar recursos y evaluar. \\
+                               \addlinespace
+      \textbf{Coordinador} & Profesional en gestión & 
+      Gestionar relación con colegios. \\
+                           & (4-6 h/semana) &
+                           Asegurar calidad y logística. \\
+                           \addlinespace
+      \textbf{Docente Contacto} & Docente del colegio & 
+      Punto de contacto institucional. \\
+                                & (Dedicación variable) &
+                                Coordinar y multiplicar conocimiento. \\
+                                \bottomrule
+    \end{tabular}%
+  }
+\end{frame}
+
+% --- DIAPOSITIVA DE MAQUINARIA ---
+\begin{frame}
+  \frametitle{Recursos: Maquinaria y Equipo}
+
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Tipo de Equipo} & \textbf{Descripción y Uso Principal} \\
+    \midrule
+    \textbf{Herramientas Taller} & 
+    Cautín, multímetro, alicates. Para el ensamblaje electrónico en el 
+    laboratorio de la universidad. \\
+    \addlinespace
+    \textbf{Equipo de Cómputo} & 
+    Computador portátil para programación, análisis de datos y elaboración 
+    de informes. \\
+    \addlinespace
+    \textbf{Equipo de Pruebas} & 
+    Osciloscopio y generador de señales (opcional) para calibración y 
+    verificación del receptor. \\
+    \addlinespace
+    \textbf{Transporte} & 
+    Vehículo para el traslado del equipo y del personal al colegio para la 
+    instalación y seguimiento. \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}

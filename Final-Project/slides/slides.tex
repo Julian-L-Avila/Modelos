@@ -9,6 +9,15 @@
 \usepackage{ragged2e}
 \usepackage{mathtools}
 \usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit}
+\usepackage{siunitx}
+\sisetup{
+	group-separator={.},
+	group-minimum-digits=4
+}
 \addbibresource{../document/references.bib}
 
 \usetheme[numbering=counter, progressbar=frametitle, background=light]{metropolis}
@@ -46,6 +55,14 @@
 
 \input{./Sections/location.tex}
 
+\input{./Sections/processes.tex}
+
+\input{./Sections/revenues.tex}
+
+\input{./Sections/costs.tex}
+
+\input{./Sections/tir.tex}
+
 \section{Bibliografía}
 \begin{frame}[allowframebreaks]{Bibliography}
 	\printbibliography
@@ -57,7 +74,7 @@
 	{\LARGE Gracias por la atención}
 	\vspace{0.5cm}
 
-\Large ¿Preguntas?
+	\Large ¿Preguntas?
 \end{frame}
 
 \end{document}
