@@ -1,0 +1,192 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\geometry{
+  letterpaper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
+}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{\textit{Alcance del Proyecto}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{backgrounds}
+
+% Title and author formatting
+\title{\textbf{Alcance del Proyecto de Aplicación Móvil de Gestión Energética}}
+\author{
+  Bryan Martinez Anzola \\
+  Laura Yeraldin Herrera Martinez \\
+  Julian Leonardo Avila Martinez \\[1em]
+  \textit{F\'isica}\\
+  \textit{Universidad Distrital Francisco José de Caldas}
+}
+\date{\today}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\section{Definición del Alcance}
+
+El presente documento detalla el alcance para la elaboración de una
+propuesta de diseño de una aplicación móvil \textbf{(qué)}. Este será
+desarrollado por el equipo de proyecto \textbf{(quién)} y está dirigido a los
+hogares de Bogotá con medidores inteligentes de Codensa S.A ESP
+\textbf{(dónde)}. El proceso consiste en la formulación de una propuesta
+integral, abarcando desde el análisis del problema hasta un estudio de
+viabilidad financiera \textbf{(cómo)}, utilizando como insumo principal la
+información de consumo energético de dichos medidores \textbf{(con qué)}.
+
+A continuación, se desglosa el alcance del producto final y del proyecto que lo
+enmarca.
+
+A continuación, se presenta un resumen del alcance para el proyecto y para el
+producto, seguido del desglose detallado de cada uno.
+
+\paragraph{Resumen del Alcance del Proyecto.}
+El proyecto se enfoca en la elaboración de una \textbf{propuesta de diseño}
+completa para una aplicación móvil, concebida como un trabajo de grado. Este
+proceso abarca desde la investigación inicial y el análisis del problema hasta
+la entrega de un estudio de viabilidad financiera, junto con documentos clave
+de gestión como la EAP y la Matriz de Marco Lógico. Queda explícitamente
+fuera de este alcance el desarrollo de código o la implementación técnica de
+la aplicación.
+
+\paragraph{Resumen del Alcance del Producto.}
+El producto consiste en el \textbf{documento de propuesta de diseño} para una
+aplicación móvil dirigida a clientes de Codensa S.A ESP en Bogotá que
+utilizan medidores inteligentes. La propuesta describirá funcionalidades
+clave como el seguimiento del consumo en tiempo real, consejos de ahorro
+energético y el cálculo del impacto ambiental. Asimismo, definirá el público
+objetivo, un modelo de negocio de pago, su distribución vía Google Play Store
+y los criterios de éxito para una eventual implementación.
+
+\section{Alcance del Producto}
+
+El producto no es la aplicación móvil funcional, sino la \textbf{propuesta
+de diseño conceptual, técnico y financiero} para su posterior desarrollo.
+
+\subsection{Descripción y Funcionalidades}
+La aplicación tiene como objetivo principal gestionar la información de
+consumo de energía en los hogares de Bogotá, procesando los datos de los
+medidores inteligentes instalados por Codensa S.A ESP. Busca mitigar la
+incertidumbre de los usuarios sobre su consumo y costo energético.
+
+Las funcionalidades y beneficios contemplados en el diseño son:
+\begin{itemize}
+  \item Visualización del consumo diario para fomentar el ahorro.
+  \item Provisión de consejos personalizados para el ahorro energético.
+  \item Estimación del costo de la factura en tiempo real.
+  \item Simulación de beneficios ante la implementación de energías renovables.
+  \item Cálculo del impacto ambiental del consumo (emisiones de CO2).
+  \item Comparación de datos históricos de consumo con meses anteriores.
+\end{itemize}
+Adicionalmente, la propuesta debe definir un protocolo de comunicación entre
+la aplicación y el servidor del medidor, así como un proceso de análisis
+matemático de los datos.
+
+\subsection{Público Objetivo}
+El producto está diseñado para los siguientes usuarios:
+\begin{itemize}
+  \item Clientes residenciales de Codensa S.A ESP en la ciudad de Bogotá.
+  \item Específicamente, hogares que cuenten con medidores inteligentes
+    de energía.
+  \item El mercado potencial inicial se estima en 40,000 clientes, con una
+    segmentación detallada por estrato socioeconómico.
+\end{itemize}
+
+\subsection{Aspectos Comerciales y Técnicos}
+\begin{itemize}
+  \item \textbf{Canal de Distribución:} La propuesta considerará Google
+    Play Store como el canal de comercialización para dispositivos Android.
+  \item \textbf{Modelo de Precios:} Se propone un modelo de aplicación paga,
+    con un precio de referencia de \$1,000 pesos colombianos, basado en un
+    análisis de mercado.
+  \item \textbf{Estudio Técnico:} El diseño incluirá una definición de los
+    requerimientos de software y hardware necesarios para el desarrollo.
+\end{itemize}
+
+\subsection{Criterios de Aceptación del Producto}
+El éxito del producto diseñado, si fuese implementado, se mediría a través
+del cumplimiento de los siguientes objetivos:
+\begin{itemize}
+  \item Minimizar la incertidumbre sobre el consumo y costo de la energía
+    en los hogares objetivo.
+  \item Contribuir a una disminución porcentual de las quejas sobre
+    facturación en CODENSA.
+  \item Fomentar un aumento porcentual en el pago oportuno de las facturas
+    de energía por parte de los usuarios.
+\end{itemize}
+
+\section{Alcance del Proyecto}
+El proyecto abarca todas las actividades necesarias para generar la
+propuesta de diseño descrita anteriormente, en el marco de un proyecto de
+grado.
+
+\subsection{Entregables del Proyecto}
+El entregable principal es el documento consolidado de la \textbf{Propuesta
+de Diseño de la Aplicación Móvil}. Adicionalmente, se generarán los
+siguientes entregables implícitos del trabajo de grado:
+\begin{itemize}
+  \item Análisis del problema y de objetivos.
+  \item Selección y justificación de la estrategia óptima.
+  \item Estructura Analítica del Proyecto (EAP).
+  \item Matriz de Marco Lógico.
+  \item Normograma aplicable al proyecto.
+  \item Estudio financiero que determine la viabilidad del proyecto.
+  \item Documento final con conclusiones y bibliografía.
+\end{itemize}
+
+\subsection{Exclusiones del Proyecto}
+Para gestionar adecuadamente las expectativas de los interesados, se define
+explícitamente lo que está fuera del alcance:
+\begin{itemize}
+  \item El desarrollo de software, la programación o la implementación
+    física de la aplicación móvil.
+  \item La instalación, operación o mantenimiento de los medidores
+    inteligentes de energía, responsabilidad que recae en Codensa S.A ESP.
+\end{itemize}
+
+\subsection{Restricciones}
+\begin{itemize}
+  \item El proyecto debe concluir con un estudio que determine la
+    viabilidad financiera de la implementación de la aplicación.
+  \item La evaluación financiera debe considerar un período de vida útil
+    de 5 años para la proyección del flujo de caja.
+\end{itemize}
+
+\subsection{Supuestos}
+La planificación del proyecto se basa en los siguientes supuestos:
+\begin{itemize}
+  \item El proyecto es financieramente viable, según los indicadores de
+    TIR y VPN obtenidos en el estudio económico.
+  \item Las ganancias proyectadas se optimizan si la inversión inicial se
+    asegura mediante un préstamo de una entidad financiera.
+\end{itemize}
+
+
+\end{document}
