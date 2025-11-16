@@ -1,0 +1,408 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{ragged2e} % Para \RaggedRight
+\usepackage{amsmath} % Para la fórmula PERT
+\usepackage{pdflscape} % Para tablas apaisadas
+
+\geometry{
+  letterpaper,
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
+}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{\textit{Gestión del Alcance y Cronograma del Proyecto}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{backgrounds, trees, shadows, arrows.meta}
+
+% Title and author formatting
+\title{\textbf{Propuesta de diseño de una aplicación móvil para gestionar la información de consumo de energía en los hogares de Bogotá} \\ [1em] \large Gestión del Alcance, EDT, PERT y CPM}
+\author{
+  Laura Herrera \\
+  Julian Avila \\
+  Bryan Martinez
+}
+\date{October 23, 2025} % Actualizado desde el \today original
+
+% Definición de un nuevo tipo de columna para longtable
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}m{#1}}
+
+% Estilo para el diagrama WBS
+\tikzstyle{wbs_root} = [
+rectangle, 
+rounded corners, 
+draw=blue!80!black, 
+fill=blue!20,
+thick,
+minimum height=3em, 
+minimum width=6em,
+text width=4.5cm,
+align=center,
+drop shadow={opacity=0.5}
+]
+\tikzstyle{wbs_level_2} = [
+rectangle, 
+rounded corners, 
+draw=blue!70!black, 
+fill=blue!10,
+thick,
+text width=4.5cm,
+align=center,
+drop shadow={opacity=0.3}
+]
+\tikzstyle{wbs_level_3} = [
+rectangle, 
+rounded corners, 
+draw=gray!80!black, 
+fill=gray!5,
+thick,
+text width=4cm,
+align=center
+]
+
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Gestión del Alcance del Proyecto}
+
+La gestión del alcance del proyecto es el conjunto de procesos necesarios para asegurar que el proyecto incluya todo el trabajo requerido, y únicamente el trabajo requerido, para completar el proyecto con éxito.
+
+\subsection{Planificar la Gestión del Alcance}
+
+Este proceso crea el Plan de Gestión del Alcance, que documenta cómo se definirá, validará y controlará el alcance. Para este proyecto, el plan establece:
+\begin{itemize}
+  \item \textbf{Definición del Alcance:} El alcance se definirá en el Enunciado del Alcance del Proyecto, basado en los requisitos de negocio  y de los interesados.
+  \item \textbf{Creación de la EDT/WBS:} El alcance total se descompondrá jerárquicamente en fases (Nivel 2), entregables (Nivel 3) y paquetes de trabajo (Nivel 4).
+  \item \textbf{Validación del Alcance:} Cada entregable (ej. prototipo funcional, estudio de mercado) será formalmente aceptado mediante validación contra los requisitos.
+  \item \textbf{Control del Alcance:} Se monitoreará el estado del alcance y se gestionarán los cambios a la línea base mediante un proceso formal de control de cambios.
+\end{itemize}
+
+\subsection{Recopilar Requisitos}
+
+Este es el proceso de determinar, documentar y gestionar las necesidades y los requisitos de los interesados. Los requisitos del proyecto se documentan formalmente en el entregable 1.1.2  e incluyen:
+\begin{itemize}
+  \item \textbf{Requisitos Funcionales:} Características que debe tener el software, como la comunicación con el medidor, la visualización de gráficos de consumo, sistema de identificación, etc..
+  \item \textbf{Requisitos No Funcionales:} Criterios de calidad como rendimiento, compatibilidad multiplataforma, usabilidad y seguridad.
+  \item \textbf{Requisitos de Negocio:} Objetivos de alto nivel, como ``minimizar la incertidumbre sobre el consumo de energía''.
+  \item \textbf{Matriz de Trazabilidad de Requisitos:} Documento que vincula los requisitos con su origen y los entregables.
+\end{itemize}
+
+\subsection{Definir el Alcance}
+
+Este proceso desarrolla una descripción detallada del proyecto y del producto. El resultado clave es el Enunciado del Alcance del Proyecto, que conforma el primer elemento de la Línea Base del Alcance.
+
+\begin{center}
+  \begin{longtable}{@{}L{4.5cm}|L{11.5cm}@{}}
+    \caption{Enunciado del Alcance del Proyecto} \label{tab:scope_statement} \\
+    \toprule
+    \textbf{Elemento} & \textbf{Descripción} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continuación}} \\
+    \toprule
+    \textbf{Elemento} & \textbf{Descripción} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+    \textbf{Descripción del Alcance del Producto} & 
+    Propuesta de diseño y desarrollo de un prototipo/modelo de simulación de una aplicación móvil para gestionar la información de consumo de energía en hogares de Bogotá, procesando datos de medidores inteligentes. El software debe ser multiplataforma, comunicarse con un servidor y presentar datos de consumo, costos y consejos de ahorro. \\
+    \midrule
+    \textbf{Entregables Principales (Nivel 3)} & 
+    Los entregables principales del proyecto son:
+    \begin{itemize}[noitemsep, nolistsep, leftmargin=*]
+      \item \textbf{1.1.1:} Elaboración del Estudio de Mercado.
+      \item \textbf{1.1.2:} Documentación de Requisitos de la Aplicación.
+      \item \textbf{1.2.1:} Estudio Técnico y Arquitectura de Software.
+      \item \textbf{1.2.2:} Diseño y Desarrollo del Prototipo/Simulación.
+      \item \textbf{1.2.3:} Pruebas y Verificación del Aplicativo.
+      \item \textbf{1.2.4:} Mantenimiento del Aplicativo (Plan).
+      \item \textbf{1.3.1:} Análisis Económico y Financiero.
+      \item \textbf{1.3.2:} Elaboración del Marco Legal (Normograma).
+    \end{itemize} \\
+    \midrule
+    \textbf{Criterios de Aceptación} & 
+    \begin{itemize}[noitemsep, nolistsep, leftmargin=*]
+      \item El prototipo debe cumplir con todos los requisitos funcionales y no funcionales documentados.
+      \item El análisis financiero debe demostrar viabilidad mediante indicadores TIR y VPN.
+      \item El estudio de mercado debe validar la demanda y canales de comercialización.
+    \end{itemize} \\
+    \midrule
+    \textbf{Exclusiones del Proyecto} & 
+    \begin{itemize}[noitemsep, nolistsep, leftmargin=*]
+      \item El despliegue comercial masivo de la aplicación (el proyecto se centra en el diseño y simulación/prototipo ).
+      \item Desarrollo o instalación de hardware (medidores inteligentes).
+      \item Soporte a usuarios fuera de Bogotá o sin medidores inteligentes.
+    \end{itemize} \\
+  \end{longtable}
+\end{center}
+
+\subsection{Crear la EDT/WBS (Estructura de Desglose del Trabajo)}
+
+Este es el proceso de subdividir los entregables y el trabajo del proyecto en componentes más pequeños y manejables.
+
+\subsubsection{Estructura Jerárquica de la EDT}
+La EDT organiza y define el alcance total del proyecto, descomponiéndolo en Fases (Nivel 2), Entregables (Nivel 3) y Paquetes de Trabajo (Nivel 4). Las tres fases principales son:
+\begin{enumerate}
+  \item \textbf{Estudio de Mercado y Requisitos} 
+  \item \textbf{Diseño Técnico y Desarrollo (Prototipo/Simulación)} 
+  \item \textbf{Gestión Legal y Financiera} 
+\end{enumerate}
+
+\begin{figure}[h!]
+  \centering
+  \resizebox{1.0\textwidth}{!}{
+    \begin{tikzpicture}[
+      level 1/.style={sibling distance=15cm, level distance=2.5cm},
+      level 2/.style={sibling distance=5.0cm, level distance=3.5cm},
+      level 3/.style={sibling distance=1cm, level distance=4.5cm, text width=3.5cm},
+      edge from parent/.style={draw, -{Latex[length=3mm, width=2mm]}, thick, blue!60!black}
+      ]
+      \node [wbs_root] {\textbf{1.0 Diseño de Aplicación Móvil de Gestión de Energía} }
+        child { node [wbs_level_2] {\textbf{1.1 Estudio de Mercado y Requisitos} }
+          child { node [wbs_level_3] {1.1.1 Elaboración del Estudio de Mercado } }
+          child { node [wbs_level_3] {1.1.2 Documentación de Requisitos de la Aplicación } }
+        }
+        child { node [wbs_level_2] {\textbf{1.2 Diseño Técnico y Desarrollo (Prototipo)} }
+          child { node [wbs_level_3] {1.2.1 Estudio Técnico y Arquitectura de Software } }
+          child { node [wbs_level_3] {1.2.2 Diseño y Desarrollo del Prototipo/Simulación } }
+          child { node [wbs_level_3] {1.2.3 Pruebas y Verificación del Aplicativo } }
+          child { node [wbs_level_3] {1.2.4 Mantenimiento del Aplicativo } }
+        }
+        child { node [wbs_level_2] {\textbf{1.3 Gestión Legal y Financiera} }
+          child { node [wbs_level_3] {1.3.1 Análisis Económico y Financiero } }
+          child { node [wbs_level_3] {1.3.2 Elaboración del Marco Legal (Normograma) } }
+        };
+    \end{tikzpicture}
+  }
+  \caption{Diagrama de la EDT (Niveles 1, 2 y 3).}
+\end{figure}
+
+\subsubsection{Diccionario de la EDT}
+El diccionario de la EDT proporciona detalles sobre los paquetes de trabajo (Nivel 4). Por ejemplo, el entregable 1.1.1 se descompone en:
+\begin{itemize}
+  \item \textbf{1.1.1.1 Recopilación de datos de demanda:} Investigar y recolectar datos sobre el consumo y la demanda actual.
+  \item \textbf{1.1.1.2 Segmentación de la demanda y proyección:} Analizar los datos por estrato socioeconómico y proyectar la adopción.
+  \item \textbf{1.1.1.3 Análisis de la oferta y precios:} Estudiar competidores y definir modelos de precios.
+  \item \textbf{1.1.1.4 Determinación de canal de comercialización:} Definir cómo se distribuirá la aplicación.
+\end{itemize}
+Los detalles de todos los paquetes de trabajo (Nivel 4) se encuentran en las siguientes tablas de estimación.
+
+\subsection{Validar el Alcance}
+Es el proceso de formalizar la aceptación de los entregables completados. En este proyecto, esto ocurre, por ejemplo, en la actividad \textbf{1.2.3.2 Validación del Cumplimiento de Requerimientos} , donde el prototipo se compara formalmente con la documentación de requisitos (entregable 1.1.2).
+
+\subsection{Controlar el Alcance}
+Es el proceso de monitorear el estado del alcance y gestionar cambios a la línea base. Si durante la ``Ejecución de Pruebas'' (1.2.3.1)  se descubre una desviación o un nuevo requisito, se debe gestionar a través de un control de cambios formal para evitar la corrupción del alcance.
+
+\newpage
+\section{Gestión del Cronograma (PERT y CPM)}
+Una vez definida la EDT, se procede a estimar la duración de las actividades y a secuenciarlas.
+
+\subsection{Estimación de Duración (PERT)}
+Debido a la incertidumbre en un proyecto de desarrollo de software, se utiliza la Técnica de Evaluación y Revisión de Programas (PERT) para estimar la duración de los Paquetes de Trabajo (Nivel 4).
+
+\subsubsection{Metodología PERT}
+Para cada actividad, se definen tres estimaciones de tiempo:
+\begin{itemize}
+  \item \textbf{Tiempo Optimista ($T_O$):} Duración mínima si todo es favorable.
+  \item \textbf{Tiempo Pesimista ($T_P$):} Duración máxima en condiciones desfavorables.
+  \item \textbf{Tiempo Más Probable ($T_M$):} Duración más realista (la estimación base).
+\end{itemize}
+
+El Tiempo Esperado ($T_E$) se calcula usando una distribución beta ponderada:
+$$ T_E = \frac{T_O + 4T_M + T_P}{6} $$ 
+
+\subsubsection{Tabla de Estimaciones PERT}
+A continuación, se presentan las estimaciones $T_O$, $T_M$ (Base) y $T_P$, junto con el cálculo de $T_E$ para todos los paquetes de trabajo (Nivel 4).
+
+\begin{landscape}
+  \centering
+  \tiny
+  \begin{longtable}{@{}L{1.5cm}|L{7cm}|r|r|r|r@{}}
+    \caption{Estimación PERT para Paquetes de Trabajo (Unidad: Días) } \label{tab:pert} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_O$ (Opt.)} & \textbf{$T_M$ (Base)} & \textbf{$T_P$ (Pes.)} & \textbf{$T_E$ (Esp.)} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{6}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continuación}} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_O$ (Opt.)} & \textbf{$T_M$ (Base)} & \textbf{$T_P$ (Pes.)} & \textbf{$T_E$ (Esp.)} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+    \multicolumn{6}{|l|}{\textbf{1.1 Estudio de Mercado y Requisitos}} \\
+    \midrule
+    1.1.1.1 & Recopilación de datos de demanda & 7.5 & 10 & 15 & 10.42 \\
+    1.1.1.2 & Segmentación de la demanda y proyección & 7.5 & 10 & 15 & 10.42 \\
+    1.1.1.3 & Análisis de la oferta y precios & 3 & 5 & 8 & 5.17 \\
+    1.1.1.4 & Determinación de canal de comercialización & 3 & 5 & 8 & 5.17 \\
+    1.1.2.1 & Definición de Requisitos Funcionales & 5 & 10 & 20 & 10.83 \\
+    1.1.2.2 & Definición de Requisitos No Funcionales & 7.5 & 10 & 15 & 10.42 \\
+    1.1.2.3 & Definición de Requisitos de Negocio & 3 & 5 & 8 & 5.17 \\
+    1.1.2.4 & Matriz de Trazabilidad de Requisitos & 3 & 5 & 8 & 5.17 \\
+    \midrule
+    \multicolumn{6}{|l|}{\textbf{1.2 Diseño Técnico y Desarrollo (Prototipo/Simulación)}} \\
+    \midrule
+    1.2.1.1 & Determinación de Características de Hardware & 2 & 3 & 5 & 3.17 \\
+    1.2.1.2 & Determinación de Características de Software & 1 & 2 & 3 & 2.00 \\
+    1.2.1.3 & Establecimiento de Protocolo de Comunicación & 1 & 2 & 5 & 2.33 \\
+    1.2.2.1 & Despliegue de la Estructura del Aplicativo (Planteamiento) & 3 & 5 & 8 & 5.17 \\
+    1.2.2.2 & Definición del Lenguaje y Base de Datos (Diseño) & 15 & 20 & 25 & 20.00 \\
+    1.2.2.3 & Implementación y Conexión con Servidor y BD & 7 & 10 & 15 & 10.33 \\
+    1.2.3.1 & Ejecución de Pruebas de Funcionamiento & 5 & 10 & 15 & 10.00 \\
+    1.2.3.2 & Validación del Cumplimiento de Requerimientos & 7 & 10 & 13 & 10.00 \\
+    \midrule
+    \multicolumn{6}{|l|}{\textbf{1.3 Gestión Legal y Financiera}} \\
+    \midrule
+    1.3.1.1 & Cálculo de Costos y Recursos & 7.5 & 10 & 15 & 10.42 \\
+    1.3.1.2 & Proyección de Ingresos y Flujo de Caja & 7.5 & 10 & 15 & 10.42 \\
+    1.3.1.3 & Determinación de Viabilidad (TIR y VPN) & 3 & 5 & 8 & 5.17 \\
+    1.3.2.1 & Identificación de Leyes Ambientales y de Uso & 10 & 15 & 20 & 15.00 \\
+    1.3.2.2 & Definición de Licencia y Condiciones de Uso & 3 & 5 & 8 & 5.17 \\
+  \end{longtable}
+\end{landscape}
+
+\subsection{Método de la Ruta Crítica (CPM)}
+El Método de la Ruta Crítica (CPM) utiliza los Tiempos Esperados ($T_E$) de PERT y las dependencias lógicas para calcular la duración total del proyecto.
+
+\subsubsection{Dependencias de Actividades}
+Se establecieron dependencias de Finalización a Inicio (FS) basadas en el flujo lógico del proyecto. La siguiente tabla resume las duraciones $T_E$ y los predecesores inmediatos.
+
+\begin{center}
+  \scriptsize
+  \begin{longtable}{@{}L{1.5cm}|L{7.5cm}|r|L{5cm}@{}}
+    \caption{Paquetes de Trabajo, Duración Esperada y Predecesores } \label{tab:predecessors} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_E$} & \textbf{Predecesor(es)} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{4}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continuación}} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_E$} & \textbf{Predecesor(es)} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+    1.1.1.1 & Recopilación de datos de demanda & 10.42 & - \\
+    1.1.1.2 & Segmentación de la demanda y proyección & 10.42 & 1.1.1.1 \\
+    1.1.1.3 & Análisis de la oferta y precios & 5.17 & - \\
+    1.1.1.4 & Det. canal comercialización & 5.17 & 1.1.1.2, 1.1.1.3 \\
+    1.1.2.1 & Definición de Requisitos Funcionales & 10.83 & 1.1.1.4 \\
+    1.1.2.2 & Definición de Requisitos No Funcionales & 10.42 & 1.1.1.4 \\
+    1.1.2.3 & Definición de Requisitos de Negocio & 5.17 & 1.1.1.4 \\
+    1.1.2.4 & Matriz de Trazabilidad de Requisitos & 5.17 & 1.1.2.1, 1.1.2.2, 1.1.2.3 \\
+    \midrule
+    1.2.1.1 & Determinación de Características de Hardware & 3.17 & 1.1.2.4 \\
+    1.2.1.2 & Determinación de Características de Software & 2.00 & 1.1.2.4 \\
+    1.2.1.3 & Establecimiento de Protocolo de Comunicación & 2.33 & 1.2.1.1, 1.2.1.2 \\
+    1.2.2.1 & Despliegue de la Estructura del Aplicativo (Planteamiento) & 5.17 & 1.2.1.3 \\
+    1.2.2.2 & Definición del Lenguaje y Base de Datos (Diseño) & 20.00 & 1.2.2.1 \\
+    1.2.2.3 & Implementación y Conexión con Servidor y BD & 10.33 & 1.2.2.2 \\
+    1.2.3.1 & Ejecución de Pruebas de Funcionamiento & 10.00 & 1.2.2.3 \\
+    1.2.3.2 & Validación del Cumplimiento de Requerimientos & 10.00 & 1.2.3.1 \\
+    \midrule
+    1.3.1.1 & Cálculo de Costos y Recursos & 10.42 & 1.1.2.4 \\
+    1.3.1.2 & Proyección de Ingresos y Flujo de Caja & 10.42 & 1.3.1.1 \\
+    1.3.1.3 & Determinación de Viabilidad (TIR y VPN) & 5.17 & 1.3.1.2 \\
+    1.3.2.1 & Iden. Leyes Ambientales y de Uso & 15.00 & 1.1.2.4 \\
+    1.3.2.2 & Def. Licencia y Condiciones de Uso & 5.17 & 1.3.2.1 \\
+  \end{longtable}
+\end{center}
+
+\subsubsection{Cálculo de Tiempos y Holgura}
+Mediante el pase hacia adelante (cálculo de $ES/EF$) y el pase hacia atrás (cálculo de $LS/LF$), se determina la Holgura ($H = LS - ES$) de cada actividad.
+
+\begin{landscape}
+  \centering
+  \tiny
+  \begin{longtable}{@{}L{1.5cm}|L{7cm}|r|r|r|r|r|r@{}}
+    \caption{Cálculo del Método de la Ruta Crítica (CPM) (Unidad: Días) } \label{tab:cpm} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_E$} & \textbf{ES} & \textbf{EF} & \textbf{LS} & \textbf{LF} & \textbf{Holgura} \\
+    \midrule
+    \endfirsthead
+    \multicolumn{8}{c}%
+    {{\bfseries \tablename\ \thetable{} -- continuación}} \\
+    \toprule
+    \textbf{ID} & \textbf{Paquete de Trabajo} & \textbf{$T_E$} & \textbf{ES} & \textbf{EF} & \textbf{LS} & \textbf{LF} & \textbf{Holgura} \\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+    \multicolumn{8}{|l|}{\textbf{Ruta Crítica (Holgura = 0)}} \\
+    \midrule
+    1.1.1.1 & Recopilación de datos de demanda & 10.42 & 0.00 & 10.42 & 0.00 & 10.42 & \textbf{0.00} \\
+    1.1.1.2 & Segmentación de la demanda y proyección & 10.42 & 10.42 & 20.84 & 10.42 & 20.84 & \textbf{0.00} \\
+    1.1.1.4 & Det. canal comercialización & 5.17 & 20.84 & 26.01 & 20.84 & 26.01 & \textbf{0.00} \\
+    1.1.2.1 & Definición de Requisitos Funcionales & 10.83 & 26.01 & 36.84 & 26.01 & 36.84 & \textbf{0.00} \\
+    1.1.2.4 & Matriz de Trazabilidad de Requisitos & 5.17 & 36.84 & 42.01 & 36.84 & 42.01 & \textbf{0.00} \\
+    1.2.1.1 & Det. Caract. Hardware & 3.17 & 42.01 & 45.18 & 42.01 & 45.18 & \textbf{0.00} \\
+    1.2.1.3 & Establecimiento de Protocolo de Comunicación & 2.33 & 45.18 & 47.51 & 45.18 & 47.51 & \textbf{0.00} \\
+    1.2.2.1 & Despliegue de la Estructura (Planteamiento) & 5.17 & 47.51 & 52.68 & 47.51 & 52.68 & \textbf{0.00} \\
+    1.2.2.2 & Definición del Lenguaje y Base de Datos (Diseño) & 20.00 & 52.68 & 72.68 & 52.68 & 72.68 & \textbf{0.00} \\
+    1.2.2.3 & Implementación y Conexión con Servidor y BD & 10.33 & 72.68 & 83.01 & 72.68 & 83.01 & \textbf{0.00} \\
+    1.2.3.1 & Ejecución de Pruebas de Funcionamiento & 10.00 & 83.01 & 93.01 & 83.01 & 93.01 & \textbf{0.00} \\
+    1.2.3.2 & Validación del Cumplimiento de Requerimientos & 10.00 & 93.01 & 103.01 & 93.01 & 103.01 & \textbf{0.00} \\
+    \midrule
+    \multicolumn{8}{|l|}{\textbf{Actividades No Críticas (Con Holgura)}} \\
+    \midrule
+    1.1.1.3 & Análisis de la oferta y precios & 5.17 & 0.00 & 5.17 & 15.67 & 20.84 & 15.67 \\
+    1.1.2.2 & Definición de Requisitos No Funcionales & 10.42 & 26.01 & 36.43 & 26.42 & 36.84 & 0.41 \\
+    1.1.2.3 & Definición de Requisitos de Negocio & 5.17 & 26.01 & 31.18 & 31.67 & 36.84 & 5.66 \\
+    1.2.1.2 & Determinación de Características de Software & 2.00 & 42.01 & 44.01 & 43.18 & 45.18 & 1.17 \\
+    \midrule
+    \multicolumn{8}{|l|}{\textbf{Actividades de Gestión Legal y Financiera (Ruta No Crítica)}} \\
+    \midrule
+    1.3.1.1 & Cálculo de Costos y Recursos & 10.42 & 42.01 & 52.43 & 87.68 & 98.10 & 45.67 \\
+    1.3.1.2 & Proyección de Ingresos y Flujo de Caja & 10.42 & 52.43 & 62.85 & 98.10 & 108.52 & 45.67 \\
+    1.3.1.3 & Determinación de Viabilidad (TIR y VPN) & 5.17 & 62.85 & 68.02 & 108.52 & 113.69 & 45.67 \\
+    1.3.2.1 & Iden. Leyes Ambientales y de Uso & 15.00 & 42.01 & 57.01 & 82.84 & 97.84 & 40.83 \\
+    1.3.2.2 & Def. Licencia y Condiciones de Uso & 5.17 & 57.01 & 62.18 & 97.84 & 103.01 & 40.83 \\
+  \end{longtable}
+\end{landscape}
+
+\subsection{Identificación de la Ruta Crítica}
+El análisis del CPM arroja una duración total esperada del proyecto de 103.01 Días.
+
+La Ruta Crítica está compuesta por todas las actividades con Holgura (H) igual a cero. Cualquier retraso en estas actividades impactará directamente la fecha de finalización del proyecto.
+
+La Ruta Crítica identificada es:
+\textbf{1.1.1.1 $\rightarrow$ 1.1.1.2 $\rightarrow$ 1.1.1.4 $\rightarrow$ 1.1.2.1 $\rightarrow$ 1.1.2.4 $\rightarrow$ 1.2.1.1 $\rightarrow$ 1.2.1.3 $\rightarrow$ 1.2.2.1 $\rightarrow$ 1.2.2.2 $\rightarrow$ 1.2.2.3 $\rightarrow$ 1.2.3.1 $\rightarrow$ 1.2.3.2}
+
+\subsubsection{Conclusiones del Análisis}
+\begin{itemize}
+  \item El camino crítico demuestra que la Fase 1.2 (Diseño Técnico y Desarrollo de Software) es la que define la duración total del proyecto.
+  \item La Fase 1.3 (Gestión Legal y Financiera) es una ruta no crítica y posee una holgura significativa (ej. 1.3.2.2 tiene 40.83 días de holgura ), lo que significa que sus tareas pueden retrasarse sin afectar la entrega final del proyecto.
+  \item La actividad individual más larga en la ruta crítica es \textbf{1.2.2.2 (Definición del Lenguaje y Base de Datos)}, con una duración esperada de 20.00 días. Esta actividad representa un punto clave para el monitoreo y control del proyecto.
+\end{itemize}
+
+\end{document}
