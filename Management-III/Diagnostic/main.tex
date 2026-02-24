@@ -1,5 +1,6 @@
 \documentclass[11pt,letterpaper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{csquotes}
 \usepackage[spanish]{babel}
 \usepackage{geometry}
 \usepackage{fancyhdr}
@@ -16,6 +17,14 @@
 \usepackage{caption}
 \usepackage{siunitx}
 \usepackage[spanish]{cleveref}
+\usepackage{microtype}
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    sorting=nyt
+]{biblatex}
+
+\addbibresource{references.bib}
 
 \geometry{
   a4paper,
@@ -514,4 +523,7 @@ electricidad e inyección de biometano, Biogás Doña Juana completará
 la transición de la mitigación de una crisis ambiental a la provisión energética
 sostenible del Distrito Capital.
 
+\newpage
+\printbibliography
+\nocite{*}
 \end{document}
