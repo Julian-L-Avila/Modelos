@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{tikz}
+\usepackage{graphicx} % Añadido para escalar el organigrama
 \usepackage{hyperref}
 \usepackage{ragged2e}
 \usepackage{amsmath}
@@ -39,19 +40,47 @@
 \fancyhead[L]{\textit{Diagnostico}}
 \fancyfoot[C]{\thepage}
 
-\title{\textbf{Análisis Operativo y Estratégico del Relleno Sanitario Doña Juana} \\ [1em] \large Diagnostico}
-\author{
-  Julian Avila \\
-  Bryan Martinez \\
-  Angie Sierra
-}
-\date{\today}
 
 \begin{document}
-\maketitle
+\begin{center}
 \thispagestyle{empty}
 
+\vspace*{2cm}
+
+\textbf{Análisis Operativo y Estratégico del Relleno Sanitario Doña Juana}
+
+\vspace{0.5cm}
+
+\textbf{Diagnóstico}
+
+\vspace{3cm}
+
+Universidad Distrital Francisco José de Caldas
+
+\vspace{0.5cm}
+
+Programa Académico de Física
+
+\vspace{2cm}
+
+Gestión Tecnologica y Compromiso Social
+
+\vspace{0.5cm}
+
+\vspace{3cm}
+
+Julian Avila \\
+Bryan Martinez \\
+Angie Sierra
+
+\vspace{1.5cm}
+
+\today
+
+\end{center}
+
 \newpage
+
 \tableofcontents
 \newpage
 
@@ -102,6 +131,7 @@ representa una actualización de capacidad actualmente limitada por cuellos de
 botella estructurales y financieros.
 
 \newpage
+
 \section{Identidad Corporativa y Arquitectura Organizacional}
 La estructura jurídica y operativa de la entidad responde a la complejidad de los mercados regulados de servicios públicos y los mecanismos internacionales de financiación climática.
 
@@ -109,8 +139,58 @@ La estructura jurídica y operativa de la entidad responde a la complejidad de l
 La organización opera bajo la razón social \textbf{Biogás Doña Juana S.A.S. E.S.P.}, siendo reconocida comercialmente en el sector como Biogás Colombia. Jurídicamente, se constituye como una Empresa de Servicios Públicos (E.S.P.) de carácter privado. Esta naturaleza le otorga un mandato especializado y distinto al del operador del relleno (Centro de Gerenciamiento de Residuos - CGR), enfocándose exclusivamente en la captura y valorización del componente gaseoso. Aunque es una corporación de derecho privado, su modelo de ingresos y operación mantiene un vínculo indisoluble con el interés público a través de su contrato de concesión y el esquema de regalías transferidas a la UAESP.
 
 \subsection{Evolución de la Estructura de Gobernanza}
-La arquitectura corporativa actual es el resultado de una evolución forzada por la volatilidad de los precios del carbono. Originalmente estructurada para apalancar los ingresos del Mecanismo de Desarrollo Limpio (MDL) con participación de actores internacionales como Gas Natural SDG S.A. y Proactiva Medio Ambiente , la empresa debió someterse a una reorganización obligatoria bajo la Ley 1116 tras el colapso de los precios de los Reducciones Certificadas de Emisiones (CER) en 2011.
+La arquitectura corporativa actual es el resultado de una evolución forzada por la volatilidad de los precios del carbono. Originalmente estructurada para apalancar los ingresos del Mecanismo de Desarrollo Limpio (MDL) con participación de actores internacionales como Gas Natural SDG S.A. y Proactiva Medio Ambiente, la empresa debió someterse a una reorganización obligatoria bajo la Ley 1116 tras el colapso de los precios de las Reducciones Certificadas de Emisiones (CER) en 2011.
+
 La gobernanza actual emerge de la exitosa negociación de este proceso en 2014, lo que permitió a la entidad desacoplar su supervivencia operativa de la volatilidad del mercado spot de carbono y establecerse como una Sociedad por Acciones Simplificada (S.A.S.) estabilizada. Esta estructura reorganizada ha dotado a la empresa de la capacidad jurídica y financiera para ejecutar proyectos de capital a largo plazo, como la actual expansión de biometano.
+
+\subsection{Estructura Organizacional y Fuerza Laboral Estimada}
+Dada la envergadura de la concesión, que abarca 623 hectáreas y opera 290 pozos de extracción de manera continua, la arquitectura organizacional requiere un equipo técnico y administrativo altamente especializado. Se estima que la planta de personal directo de Biogás Doña Juana S.A.S. E.S.P. se compone de aproximadamente 45 a 50 trabajadores fijos, estructurados para garantizar una operatividad de 8760 horas al año (24/7).
+
+Para sostener la generación continua y el control del campo de biogás, el área operativa se divide en un sistema de cuatro turnos rotativos. La distribución de la fuerza laboral se desglosa de la siguiente manera:
+\begin{itemize}
+    \item \textbf{Operación de Planta y GCCS (15-20 personas):} Incluye ingenieros de turno, operadores de consola (SCADA) y técnicos de campo encargados de la calibración de cabezales y purga de condensados en los 76 km de tubería.
+    \item \textbf{Mantenimiento Electromecánico (10-12 personas):} Personal especializado en mecánica térmica y electricidad de potencia, enfocados en el mantenimiento preventivo (cambio de aceite, bujías, ajuste de válvulas) de la flota de motogeneradores Jenbacher y los sopladores industriales.
+    \item \textbf{Ingeniería Química y Acondicionamiento (5-7 personas):} Analistas de laboratorio y técnicos encargados del monitoreo de las unidades de remoción de siloxanos, control de humedad y cromatografía del gas.
+    \item \textbf{Administración, HSE y Sostenibilidad (10-11 personas):} Gerencia, especialistas en mercados de carbono (comercialización de CER), contabilidad, y gestores de relaciones comunitarias y monitoreo de emisiones ambientales.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tikzpicture}[
+      level 1/.style={sibling distance=8.5cm}, % Distancia aumentada para separar las tres ramas
+      level 2/.style={sibling distance=4.2cm}, % Distancia entre los hijos de cada rama
+      level distance=2.5cm, % Separación vertical entre niveles
+      every node/.style = {
+          shape=rectangle,
+          rounded corners,
+          draw,
+          align=center,
+          top color=white,
+          bottom color=gray!10,
+          font=\footnotesize,
+          minimum height=1.2cm,
+          text width=3.8cm % Fuerza al texto a saltar de línea y restringe el ancho
+      },
+      edge from parent/.style={draw, -latex}
+    ]
+      \node {Gerencia General \\ Biogás Colombia}
+        child { node {Dirección de \\ Operaciones (O\&M)}
+          child { node {Supervisión SCADA y Control de Campo (GCCS)} }
+          child { node {Mantenimiento de Motogeneradores y Skids} }
+        }
+        child { node {Dirección Administrativa \\ y Mercados}
+          child { node {Gestión Regulatoria (UAESP / CREG / Vanti)} }
+          child { node {Auditoría y Venta de Créditos (CER)} }
+        }
+        child { node {Dirección HSE y \\ Sostenibilidad}
+          child { node {Laboratorio Químico y Control Emisiones} }
+        };
+    \end{tikzpicture}
+    }
+    \caption{Estructura organizacional detallada y jerarquía operativa de Biogás Doña Juana S.A.S. E.S.P.}
+    \label{fig:organigrama}
+\end{figure}
 
 \newpage
 \section{Línea Base Estratégica}
@@ -166,6 +246,7 @@ comercialización de energía y reducir su dependencia de la volatilidad de los
 mercados de carbono.
 
 \newpage
+
 \section{Formulación del Problema: La Paradoja de Capacidad, Interconexión y
 Utilización}
 El problema operativo fundamental de Biogás Doña Juana S.A.S. E.S.P. es la
@@ -207,6 +288,7 @@ Existe una restricción de infraestructura externa respecto a la capacidad de la
 red de distribución municipal para absorber y transmitir la energía generada. La
 integración de sistemas de generación distribuida en la red urbana principal
 requiere subestaciones y líneas de transmisión de alto voltaje robustas.
+
 Históricamente, la ausencia de infraestructura de red de alta capacidad en las
 inmediaciones de Doña Juana, sumada a la falta de apoyo de las autoridades
 energéticas municipales para modernizar las líneas de transmisión, ha impedido
@@ -252,6 +334,7 @@ carbono; es imperativo finalizar su capacidad de generación de energía para
 asegurar una solvencia financiera permanente.
 
 \newpage
+
 \section{Demanda y Justificación: La Estrategia Energética de Doble Vector}
 La justificación estratégica y económica para resolver la restricción de
 capacidad y ejecutar la actualización de equipos a 15 MW, junto con la
@@ -367,24 +450,47 @@ neutralidad de carbono y la integración de tecnologías de conversión de
 residuos.
 
 \newpage
+
 \section{Ingeniería de Procesos y Ciclo de Producción}
 El ciclo productivo de Biogás Doña Juana integra ingeniería de fluidos y termodinámica para transformar un pasivo ambiental inestable en vectores energéticos estandarizados. El proceso se articula en tres fases críticas: extracción controlada, acondicionamiento químico y conversión energética.
 
 \subsection{Fase 1: Sistema de Recolección y Control (GCCS)}
-El Sistema de Recolección y Control de Gas (GCCS) actúa como el componente respiratorio del vertedero. El proceso de producción inicia con la aplicación de un campo de vacío mediante sopladores industriales que extraen activamente el gas de los espacios porosos de la masa de residuos.
-Esta etapa requiere un balance barométrico preciso gestionado por telemetría en tiempo real: un vacío excesivo introduce oxígeno, eliminando las bacterias metanogénicas y creando riesgo de incendio, mientras que un vacío insuficiente permite la fuga de emisiones fugitivas a la atmósfera.
+El Sistema de Recolección y Control de Gas (GCCS) actúa como el componente respiratorio del vertedero. El proceso de producción inicia con la aplicación de un campo de vacío mediante sopladores industriales que extraen activamente el gas de los espacios porosos de la masa de residuos. Esta etapa requiere un balance barométrico preciso gestionado por telemetría en tiempo real: un vacío excesivo introduce oxígeno, eliminando las bacterias metanogénicas y creando riesgo de incendio, mientras que un vacío insuficiente permite la fuga de emisiones fugitivas a la atmósfera.
 
 \subsection{Fase 2: Acondicionamiento y Eliminación de Siloxanos}
-Antes de cualquier valorización, el gas crudo debe someterse a un pretratamiento riguroso. El biogás ingresa a un sistema de acondicionamiento (skid) diseñado para deshumidificar la mezcla y eliminar partículas.
-El paso crítico en esta fase es la remoción de siloxanos, compuestos derivados de productos cosméticos en descomposición. Sin este proceso, los siloxanos se convierten en sílice (arena) dentro de las cámaras de combustión, causando daños abrasivos irreversibles en pistones y válvulas. La eficiencia de este fregado químico es determinante para garantizar la operatividad 24/7 de la planta.
+Antes de cualquier valorización, el gas crudo debe someterse a un pretratamiento riguroso. El biogás ingresa a un sistema de acondicionamiento (skid) diseñado para deshumidificar la mezcla y eliminar partículas. El paso crítico en esta fase es la remoción de siloxanos, compuestos derivados de productos cosméticos en descomposición. Sin este proceso, los siloxanos se convierten en sílice (arena) dentro de las cámaras de combustión, causando daños abrasivos irreversibles en pistones y válvulas. La eficiencia de este fregado químico es determinante para garantizar la operatividad $24/7$ de la planta.
 
 \subsection{Fase 3: Tecnologías de Valorización}
 El gas acondicionado se dirige hacia dos líneas de producción distintas según el producto final deseado:
 \begin{itemize}
     \item \textbf{Generación Eléctrica (Motores Reciprocantes):} Para la producción de electricidad, el gas se inyecta en una flota de 9 motogeneradores, presumiblemente de la serie Jenbacher Tipo 4 o 6. Estos motores están endurecidos metalúrgicamente para soportar el poder calorífico variable del biogás y convertir la energía química en potencia eléctrica para la red local.
-
     \item \textbf{Producción de Biometano (Separación por Membranas):} Para la nueva línea de Gas Natural Renovable, la empresa implementa tecnología de separación por membranas. El biogás se comprime a alta presión y se fuerza a través de membranas selectivas donde las moléculas de $\text{CO}_2$ permean más rápido que las de $\text{CH}_4$. Este proceso físico, preferido por no requerir reactivos químicos, resulta en una corriente de biometano con pureza superior al 96\%. Finalmente, el gas es comprimido entre 250 y 375 psi para su inyección en el anillo de alta presión de Vanti.
 \end{itemize}
+
+\subsection{Oportunidades de Automatización y Control de Procesos}
+El rendimiento termodinámico de la planta y la viabilidad de la transición hacia la inyección de biometano con pureza superior al 96\% dependen intrínsecamente de la calidad y estabilidad del biogás extraído. En este contexto, se identifica una vulnerabilidad operativa en la dinámica de fluidos del campo, susceptible de mejora mediante ingeniería de control avanzado.
+
+\subsubsection{Problemática Identificada: Desbalance Barométrico y Dilución del Biogás}
+La dinámica de fluidos dentro de la matriz porosa de los residuos es altamente heterogénea. Las variaciones en la presión barométrica superficial y la subsidencia natural del terreno provocan fluctuaciones en el gradiente de presión generado por los sopladores. Un vacío excesivo en zonas de baja densidad introduce oxígeno atmosférico ($\text{O}_{2}$) a través de fisuras superficiales. Físicamente, esto desencadena dos problemas críticos: la inhibición competitiva de las bacterias metanogénicas (estrictamente anaerobias) y la dilución de la concentración volumétrica de $\text{CH}_{4}$, reduciendo el índice de Wobbe del gas. Además, un nivel de $\text{O}_{2}$ superior al 3\% incrementa el riesgo de ignición subterránea espontánea.
+
+\subsubsection{Arquitectura del Sistema de Control Actual}
+Actualmente, la regulación se realiza mediante un control de supervisión macro-estructural en la planta central, midiendo el flujo totalizado. Sin embargo, a nivel de la red de 290 pozos verticales, la regulación de presión en los cabezales depende de válvulas de compuerta de accionamiento manual. La caracterización del gas se realiza de forma discreta mediante analizadores portátiles (ej. tipo GEM5000) operados por técnicos en rondas de campo. Este paradigma de control puramente reactivo adolece de tiempos muertos (\textit{dead times}) considerables en el lazo de retroalimentación, imposibilitando una respuesta dinámica ante caídas de presión atmosférica o cambios rápidos en la permeabilidad del relleno.
+
+\subsubsection{Mejora Planteada: Lazo de Control Predictivo basado en Sensores IoT y NDIR}
+Para estabilizar la fracción molar de metano y asegurar un flujo laminar y constante hacia los 9 motogeneradores proyectados, se propone la implementación de un sistema de Control Predictivo Basado en Modelos (MPC) o un control PID en cascada, instrumentado a nivel de \textit{manifolds} (sub-colectores) que agrupan conjuntos de 10 a 15 pozos.
+
+El plan de automatización se estructura en tres capas tecnológicas:
+\begin{itemize}
+    \item \textbf{Capa de Instrumentación Analítica (Sensores):} Instalación de instrumentación in-situ en cada manifold. Para medir la concentración de gases se proponen sensores Infrarrojos No Dispersivos (NDIR). Estos operan bajo la ley de Beer-Lambert, midiendo la atenuación de la radiación infrarroja a longitudes de onda específicas (3.3 $\mu$m para el $\text{CH}_{4}$ y 4.26 $\mu$m para el $\text{CO}_{2}$). Para el oxígeno se utilizarán celdas paramagnéticas, aprovechando la susceptibilidad magnética positiva del $\text{O}_{2}$, lo que permite mediciones precisas e inmunes al envenenamiento por $\text{H}_{2}\text{S}$. Adicionalmente, se instalarán transmisores de presión diferencial piezorresistivos para medir el vacío local.
+
+    \item \textbf{Capa de Actuación Proporcional:} Reemplazo de las válvulas manuales en los manifolds por válvulas de mariposa de control proporcional con caracterización isoporcentual, equipadas con actuadores electroneumáticos inteligentes. Estos recibirán señales estandarizadas de 4-20 mA o comandos digitales.
+
+    \item \textbf{Capa de Control Lógico y SCADA:} Los sensores transmitirán variables de proceso continuas mediante protocolos industriales (ej. Modbus TCP/IP o Profinet) hacia Controladores Lógicos Programables (PLC) en topología de anillo de fibra óptica. El algoritmo de control priorizará la calidad del gas:
+    $$ u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt} $$
+    Donde la variable de proceso primaria será la concentración de $\text{CH}_{4}$ y la restricción estricta (override control) será mantener el $\text{O}_{2} < 1.5\%$. Si se detecta un pico de oxígeno, el lazo de control estrangulará automáticamente la válvula del manifold correspondiente para disminuir el vacío, aislando la perturbación sin afectar la red global.
+\end{itemize}
+
+Esta automatización permite a la red de polietileno de 76 km comportarse como un sistema termodinámico autorregulado, minimizando la intervención humana en las 623 hectáreas y garantizando la calidad del combustible requerida para el despacho firme de los 15 MW.
 
 \newpage
 \section{Evaluación Estratégica: Análisis FODA Integral}
@@ -403,15 +509,12 @@ estratégica de cara a la expansión de capacidad proyectada para junio de 2026.
         \midrule
          Red de extracción de biogás extensa (290 pozos, 76 km de tubería
         HDPE). \newline
-         Experiencia técnica en tratamiento anaeróbico y quema (13,500 $m^3$/h).
-        \newline
+         Experiencia técnica en tratamiento anaeróbico y quema (13,500 $m^3$/h). \newline
          Dominio en mercados de compensación de carbono. \newline
-         Concesión a 35 años que asegura el monopolio de la materia prima.
-        &
+         Concesión a 35 años que asegura el monopolio de la materia prima. &
          Expansión de la red a 15 MW con 9 motogeneradores para junio de 2026.
         \newline
-         Proyecto de inyección de biometano (RM-1-04718-2025) con Vanti.
-        \newline
+         Proyecto de inyección de biometano (RM-1-04718-2025) con Vanti. \newline
          Incentivos fiscales (Ley 1715/2099) que subsidian la inversión de
         capital. \newline
          Alineación con los planes de acción climática 2050 de Bogotá. \\
@@ -423,14 +526,11 @@ estratégica de cara a la expansión de capacidad proyectada para junio de 2026.
          Dependencia operativa de la infraestructura de red externa
         (Enel Codensa). \newline
          Historial de volatilidad financiera (reorganización en 2013). \newline
-         Alto costo de mantenimiento por impurezas del gas (siloxanos, H2S).
-        &
+         Alto costo de mantenimiento por impurezas del gas (siloxanos, H2S). &
          Fricción legal con la UAESP sobre los límites de la concesión
         (Resolución CAR 1351). \newline
-         Presión sociopolítica para erradicar el modelo de relleno sanitario.
-        \newline
-         Auditorías de la Contraloría sobre el modelo de ingresos compartidos.
-        \newline
+         Presión sociopolítica para erradicar el modelo de relleno sanitario. \newline
+         Auditorías de la Contraloría sobre el modelo de ingresos compartidos. \newline
          Volatilidad de precios en el mercado de créditos de carbono (CER). \\
         \bottomrule
     \end{tabular}
@@ -463,6 +563,7 @@ El entorno macroeconómico y regulatorio ofrece dos vías de expansión: la
 generación eléctrica a escala y la distribución de biometano. Alcanzar el
 objetivo de 15 MW para 2026 transformará la estructura de ingresos de la
 empresa, convirtiéndola en un proveedor de servicios públicos de carga base.
+
 Simultáneamente, el proyecto de biometano con Vanti permite purificar el gas
 para su inyección en la red regional a 60 Psi, con una capacidad de hasta 3,400
 $m^3$/h. Esta alternativa de exportación molecular mitiga el riesgo de restricciones
@@ -482,6 +583,7 @@ auditorías rigurosas de la Contraloría de Bogotá, lo cual introduce fricción
 operativa recurrente.
 
 \newpage
+
 \section{Síntesis y Perspectiva Estratégica}
 Biogás Doña Juana S.A.S. E.S.P. ocupa una posición contradictoria en la
 infraestructura ambiental de Bogotá. La organización ejecuta la mitigación de
@@ -496,7 +598,9 @@ El imperativo corporativo de financiar y ejecutar la actualización de la
 capacidad de generación a 15 MW, utilizando nueve motogeneradores para junio de
 2026, es indispensable para la viabilidad a largo plazo. La dependencia de la
 quema térmica es insostenible desde la perspectiva del costo de oportunidad
-económico y la optimización macroeconómica de recursos. El entorno legislativo
+económico y la optimización macroeconómica de recursos.
+
+El entorno legislativo
 colombiano proporciona condiciones óptimas para esta capitalización. Los
 beneficios fiscales de las Leyes 1715 de 2014 y 2099 de 2021, que incluyen deducciones de renta
 del 50\%, depreciación acelerada y exenciones de IVA y aranceles, establecen una
@@ -518,6 +622,7 @@ operativas y regulatorias. La empresa debe mantener la contabilidad de carbono
 para sostener los ingresos por CER, colaborar con la UAESP y la Contraloría para
 asegurar la reinversión de dividendos sociales en las comunidades de Mochuelo y
 Usme, y aplicar los incentivos de política pública a su estructura de capital.
+
 Al resolver la paradoja de capacidad e interconexión mediante el suministro de
 electricidad e inyección de biometano, Biogás Doña Juana completará
 la transición de la mitigación de una crisis ambiental a la provisión energética
