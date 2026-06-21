@@ -1,0 +1,169 @@
+\documentclass[aspectratio=169,sn-mathphys-num,spanish]{beamer}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[sorting=none]{biblatex}
+\usepackage[spanish]{babel}
+\usepackage{ragged2e}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit}
+\usepackage{siunitx}
+\sisetup{
+	group-separator={.},
+	group-minimum-digits=4
+}
+\addbibresource{../references.bib}
+
+\usetheme[numbering=counter, progressbar=frametitle, background=light]{metropolis}
+
+\usecolortheme{dove}
+\definecolor{primary}{RGB}{88, 24, 69}
+\definecolor{secondary}{RGB}{0, 168, 150}
+
+\setbeamercovered{transparent}
+\setbeamercolor{frametitle}{fg=white, bg=primary}
+\setbeamercolor{progress bar}{fg=secondary}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamercolor{alerted text}{fg=secondary}
+\setbeamercolor{block title}{fg=primary}
+\setbeamercolor{block body}{bg=white}
+
+\title{Sistemas de Manufactura Flexible (FMS)}
+\subtitle{Transición Energética del Relleno Sanitario Doña Juana}
+\author{Julian Avila \and Bryan Martinez \and Angie Sierra}
+\institute{
+	Universidad Distrital Francisco José de Caldas \\
+	Programa Académico de Física
+}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Contenido}
+	\setbeamertemplate{section in toc}[circle]
+	\tableofcontents
+\end{frame}
+
+\section{El Paradigma de Manufactura Flexible}
+
+\begin{frame}{Definición en Dinámica de Fluidos}
+	\begin{block}{Concepto Fundamental}
+		Transición de un modelo de disposición de residuos a un sistema de
+		producción continua. El biogás se trata como una variable de estado
+		(energía química) enrutada dinámicamente según la demanda.
+	\end{block}
+
+	\vspace{0.5cm}
+	\textbf{Objetivos del FMS:}
+	\begin{itemize}
+		\item Estabilización termodinámica del caudal.
+		\item Flexibilidad de enrutamiento (Poligeneración).
+		\item Maximización de la transferencia de exergía.
+	\end{itemize}
+\end{frame}
+
+\section{Sistemas de Ingeniería: Actual vs. Propuesto}
+
+\begin{frame}{Sistema Operativo Actual}
+	\textbf{Infraestructura Física:}
+	\begin{itemize}
+		\item Red de extracción: 290 pozos, 76 km de tubería HDPE.
+		\item Flujo másico: $13,500$ a $16,000 \text{ m}^3/\text{h}$.
+	\end{itemize}
+
+	\vspace{0.5cm}
+	\textbf{Limitaciones Críticas:}
+	\begin{itemize}
+		\item \textbf{Control Reactivo:} Dependencia de válvulas manuales y
+			muestreo intermitente (riesgo de dilución por $O_2$).
+		\item \textbf{Disipación Térmica:} Generación eléctrica confinada a
+			1.7 MW. El $\sim 90\%$ del yacimiento se incinera en antorchas.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Sistema FMS a Implementar}
+	\textbf{Arquitectura Ciberfísica:}
+	\begin{itemize}
+		\item \textbf{Telemetría:} Nodos IIoT y actuación electroneumática local.
+		\item \textbf{Metrología:} Sensores NDIR ($CH_4$) y paramagnéticos ($O_2$).
+	\end{itemize}
+
+	\vspace{0.5cm}
+	\textbf{Vectores de Poligeneración:}
+	\begin{itemize}
+		\item \textbf{Vía Eléctrica:} 15 MW de carga firme mediante 9 motores
+			Jenbacher (régimen de combustión pobre).
+		\item \textbf{Vía Molecular:} Fraccionamiento mediante membranas UBE
+			para inyección de biometano ($>96\%$) a red urbana.
+	\end{itemize}
+\end{frame}
+
+\section{Fundamentación Física}
+
+\begin{frame}{Metrología: Óptica y Magnetismo}
+	\textbf{Espectrometría NDIR ($CH_4$):} \\
+	Basada en la atenuación óptica en la banda de $3.3~\mu\text{m}$. Gobernado
+	por la ley de Beer-Lambert:
+	$$I = I_{0} \exp(-\epsilon c L)$$
+	Donde $\epsilon$ es la absortividad del enlace carbono-hidrógeno.
+
+	\vspace{0.5cm}
+	\textbf{Susceptibilidad Paramagnética ($O_2$):} \\
+	Cuantificación de oxígeno basada en su interacción con gradientes
+	magnéticos. Garantiza inmunidad física a la inactivación por sulfuro
+	de hidrógeno ($H_2S$).
+\end{frame}
+
+\begin{frame}{Control Predictivo Basado en Modelos (MPC)}
+	Sustitución del control escalar por la minimización de un funcional de costo
+	multivariable sobre los espacios topológicos de estados ($X$) y acciones ($U$):
+
+	$$ J = \sum_{k} \|y(t+k|t) - r(t+k)\|_{Q}^{2} + \sum_{j} \|\Delta u(t+j|t)\|_{R}^{2} $$
+
+	\vspace{0.5cm}
+	\textbf{Implicación Física:}
+	Los operadores $Q$ y $R$ penalizan la divergencia de la trayectoria ideal,
+	aislando dinámicamente intrusiones anaeróbicas sin desestabilizar la red
+	global.
+\end{frame}
+
+\begin{frame}{Fraccionamiento Molecular (Membranas UBE)}
+	Basado en un modelo termodinámico de \textbf{solución y difusión} a través
+	de capilares de poliimida.
+
+	\vspace{0.5cm}
+	\begin{itemize}
+		\item \textbf{Permeabilidad Dieléctrica:} El $CO_2$ (polar) exhibe alta
+			solubilidad en la matriz asimétrica, atravesando la barrera.
+		\item \textbf{Repulsión Estérica:} El $CH_4$, dada su simetría tetraédrica
+			perfecta y neutralidad electromagnética, es incapaz de penetrar la
+			barrera y es retenido purificado.
+	\end{itemize}
+\end{frame}
+
+\section{Bibliografía}
+\begin{frame}[allowframebreaks]{Referencias}
+	\printbibliography
+	\nocite{*}
+\end{frame}
+
+\begin{frame}{}
+	\centering
+	{\LARGE Gracias por su atención.}
+	\vspace{0.5cm}
+
+	\Large ¿Preguntas?
+\end{frame}
+
+\end{document}
